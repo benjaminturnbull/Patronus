@@ -1,0 +1,763 @@
+{
+    "nodes": [
+        {
+            "_comment": "---------Data Classifications------------"
+        },
+        {
+            "comment": "",
+            "properties": {},
+            "name": "Ephemeral",
+            "id": 0,
+            "relationships": {},
+            "type": "DataClassification"
+        },
+        {
+            "comment": "",
+            "properties": {},
+            "name": "Variable",
+            "id": 1,
+            "relationships": {},
+            "type": "DataClassification"
+        },
+        {
+            "comment": "",
+            "properties": {},
+            "name": "Periodic",
+            "id": 2,
+            "relationships": {},
+            "type": "DataClassification"
+        },
+        {
+            "comment": "",
+            "properties": {},
+            "name": "Sporadic",
+            "id": 3,
+            "relationships": {},
+            "type": "DataClassification"
+        },
+        {
+            "comment": "",
+            "properties": {},
+            "name": "Invariable",
+            "id": 4,
+            "relationships": {},
+            "type": "DataClassification"
+        },
+        {
+            "DataTimeClassification": {
+                "Invariable": [
+                    "Company",
+                    "Software Family",
+                    "Software version",
+                    "Protocol"
+                ],
+                "Sporadic": [],
+                "Periodic": [],
+                "Ephemeral": [],
+                "Variable": []
+            }
+        },
+        {
+            "_comment": "---------companies------------"
+        },
+        {
+            "name": "Microsoft Corporation",
+            "comment": "",
+            "id": 5,
+            "properties": {},
+            "type": "Company"
+        },
+        {
+            "name": "Rubicon Communications LLC",
+            "comment": "",
+            "id": 6,
+            "properties": {},
+            "type": "Company"
+        },
+        {
+            "name": "Apple Corporation",
+            "comment": "",
+            "id": 7,
+            "properties": {},
+            "type": "Company"
+        },
+        {
+            "name": "Debian",
+            "comment": "",
+            "id": 8,
+            "properties": {},
+            "type": "Company"
+        },
+        {
+            "name": "Fedora",
+            "comment": "",
+            "id": 9,
+            "properties": {},
+            "type": "Company"
+        },
+        {
+            "name": "Canonical",
+            "comment": "",
+            "id": 10,
+            "properties": {},
+            "type": "Company"
+        },
+        {
+            "name": "OpenSSH",
+            "comment": "",
+            "id": 11,
+            "properties": {},
+            "type": "Company"
+        },
+        {
+            "name": "Rapid7 LLC",
+            "comment": "",
+            "id": 12,
+            "properties": {},
+            "type": "Company"
+        },
+        {
+            "_comment": "------------software family concept-----------"
+        },
+        {
+            "comment": "",
+            "properties": {},
+            "name": "Microsoft Windows",
+            "id": 13,
+            "relationships": {
+                "manufacturedBy": "name:Microsoft Corporation"
+            },
+            "type": "Software Family"
+        },
+        {
+            "comment": "",
+            "properties": {},
+            "name": "Microsoft Update",
+            "id": 14,
+            "relationships": {
+                "manufacturedBy": "name:Microsoft Corporation"
+            },
+            "type": "Software Family"
+        },
+        {
+            "comment": "",
+            "properties": {},
+            "name": "pfSense",
+            "id": 15,
+            "relationships": {
+                "manufacturedBy": "name:Rubicon Communications LLC"
+            },
+            "type": "Software Family"
+        },
+        {
+            "comment": "",
+            "properties": {},
+            "name": "OS X",
+            "id": 16,
+            "relationships": {
+                "manufacturedBy": "name:Apple Corporation"
+            },
+            "type": "Software Family"
+        },
+        {
+            "comment": "",
+            "properties": {},
+            "name": "Debian Linux",
+            "id": 17,
+            "relationships": {
+                "manufacturedBy": "name:Debian"
+            },
+            "type": "Software Family"
+        },
+        {
+            "comment": "",
+            "properties": {},
+            "name": "Fedora",
+            "id": 18,
+            "relationships": {
+                "manufacturedBy": "name:Fedora"
+            },
+            "type": "Software Family"
+        },
+        {
+            "comment": "",
+            "properties": {},
+            "name": "Ubuntu",
+            "id": 19,
+            "relationships": {
+                "manufacturedBy": "name:Canonical"
+            },
+            "type": "Software Family"
+        },
+        {
+            "comment": "",
+            "properties": {},
+            "name": "nginx",
+            "id": 20,
+            "relationships": {},
+            "type": "Software Family"
+        },
+        {
+            "name": "OpenSSL",
+            "comment": "",
+            "id": 21,
+            "properties": {},
+            "type": "Software Family"
+        },
+        {
+            "name": "OpenSSH",
+            "comment": "",
+            "id": 22,
+            "properties": {},
+            "type": "Software Family"
+        },
+        {
+            "comment": "",
+            "properties": {},
+            "name": "Metasploit Framework",
+            "id": 23,
+            "relationships": {
+                "manufacturedBy": "name:Rapid7 LLC"
+            },
+            "type": "Software Family"
+        },
+        {
+            "_comment": "TODO Software types concept"
+        },
+        {
+            "name": "a",
+            "comment": "a",
+            "id": 24,
+            "properties": {},
+            "type": "a"
+        },
+        {
+            "_comment": "-------Software version concept--------"
+        },
+        {
+            "_comment": "----Windows----"
+        },
+        {
+            "name": "Windows 95",
+            "comment": "",
+            "id": 25,
+            "properties": {
+                "version": "95",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "type": "Software version"
+        },
+        {
+            "name": "Windows 98",
+            "comment": "",
+            "id": 26,
+            "properties": {
+                "version": "98",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "98SE",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "name": "Windows 98SE",
+            "id": 27,
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "NT",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "name": "Windows NT",
+            "id": 28,
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "NT Server",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "name": "Windows NT Server",
+            "id": 29,
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "2000",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "name": "Windows 2000",
+            "id": 30,
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "XP",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "name": "Windows XP",
+            "id": 31,
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "XP SP1",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "name": "Windows XP SP1",
+            "id": 32,
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "XP SP2",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "name": "Windows XP SP2",
+            "id": 33,
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "7",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "name": "Windows 7",
+            "id": 34,
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "7 SP1",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "name": "Windows 7 SP1",
+            "id": 35,
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "8",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "name": "Windows 8",
+            "id": 36,
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "10",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "name": "Windows 10",
+            "id": 37,
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "2008",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "name": "Windows 2008",
+            "id": 38,
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "2008 R2",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "name": "Windows 2008 R2",
+            "id": 39,
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "2008 R2 SP1",
+                "release_date": "",
+                "end_of_support_date": ""
+            },
+            "name": "Windows 2008R2 SP1",
+            "id": 40,
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version"
+        },
+        {
+            "_comment": "----Windows Updates----"
+        },
+        {
+            "comment": "Microsoft Security Bulletin MS17-010 - Critical Security Update for Microsoft Windows SMB Server (4013389)",
+            "properties": {
+                "version": "MS17-010",
+                "release_date": "2017/3/17",
+                "end_of_support_date": ""
+            },
+            "name": "Win7 Update MS17-010",
+            "id": 41,
+            "relationships": {
+                "versionOf": "name:Microsoft Update",
+                "prerequisite_sw": [
+                    "name:Windows 7 SP1",
+                    "name:Windows 7"
+                ]
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "Microsoft Security Bulletin MS17-010 - Critical Security Update for Microsoft Windows SMB Server (4013389)",
+            "properties": {
+                "version": "MS17-010",
+                "release_date": "2017/3/17",
+                "end_of_support_date": ""
+            },
+            "name": "Win 2008 Update MS17-010",
+            "id": 42,
+            "relationships": {
+                "versionOf": "name:Microsoft Update",
+                "prerequisite_sw": [
+                    "name:Windows 2008",
+                    "name:Windows 2008 R2"
+                ]
+            },
+            "type": "Software version"
+        },
+        {
+            "_comment": "----pfSense----"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "2.1",
+                "release_date": ""
+            },
+            "name": "pfSense 2.1",
+            "id": 43,
+            "relationships": {
+                "versionOf": "name:pfSense"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "2.2",
+                "release_date": ""
+            },
+            "name": "pfSense 2.2",
+            "id": 44,
+            "relationships": {
+                "versionOf": "name:pfSense"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "2.3",
+                "release_date": ""
+            },
+            "name": "pfSense 2.3",
+            "id": 45,
+            "relationships": {
+                "versionOf": "name:pfSense"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "2.4.2",
+                "release_date": ""
+            },
+            "name": "pfSense 2.4.2",
+            "id": 46,
+            "relationships": {
+                "versionOf": "name:pfSense"
+            },
+            "type": "Software version"
+        },
+        {
+            "_comment": "----Ubuntu----"
+        },
+        {
+            "comment": "Maverick Meerkat",
+            "properties": {
+                "version": "10.10",
+                "release_date": "2010/10/10"
+            },
+            "name": "Ubuntu 10.10",
+            "id": 47,
+            "relationships": {
+                "versionOf": "name:Ubuntu"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "Natty Narwhal",
+            "properties": {
+                "version": "11.04",
+                "release_date": "2011/04/28"
+            },
+            "name": "Ubuntu 11.04",
+            "id": 48,
+            "relationships": {
+                "versionOf": "name:Ubuntu"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "Raring Ringtail",
+            "properties": {
+                "version": "13.04",
+                "release_date": "2013/04/23"
+            },
+            "name": "Ubuntu 13.04",
+            "id": 49,
+            "relationships": {
+                "versionOf": "name:Ubuntu"
+            },
+            "type": "Software version"
+        },
+        {
+            "_comment": "----nginx----"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "1.4",
+                "release_date": "2013/04/10"
+            },
+            "name": "nginx 1.4",
+            "id": 50,
+            "relationships": {
+                "versionOf": "name:nginx"
+            },
+            "type": "Software version"
+        },
+        {
+            "_comment": "----OpenSSL----"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "0.9.8m",
+                "release_date": ""
+            },
+            "name": "OpenSSL 0.9.8m",
+            "id": 51,
+            "relationships": {
+                "versionOf": "name:OpenSSL"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "0.9.8m",
+                "release_date": ""
+            },
+            "name": "OpenSSL 0.9.8q",
+            "id": 52,
+            "relationships": {
+                "versionOf": "name:OpenSSL"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "0.9.8m",
+                "release_date": ""
+            },
+            "name": "OpenSSL 0.9.8g",
+            "id": 53,
+            "relationships": {
+                "versionOf": "name:OpenSSL"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "0.9.8m",
+                "release_date": ""
+            },
+            "name": "OpenSSL 0.9.8a",
+            "id": 54,
+            "relationships": {
+                "versionOf": "name:OpenSSL"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "1.0.0a",
+                "release_date": ""
+            },
+            "name": "OpenSSL 1.0.0a",
+            "id": 55,
+            "relationships": {
+                "versionOf": "name:OpenSSL"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "1.0.0a",
+                "release_date": ""
+            },
+            "name": "OpenSSL 1.0.0b",
+            "id": 56,
+            "relationships": {
+                "versionOf": "name:OpenSSL"
+            },
+            "type": "Software version"
+        },
+        {
+            "_comment": "----SSH----"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "7.6",
+                "release_date": "2017/10/3"
+            },
+            "name": "OpenSSH Client 7.6",
+            "id": 57,
+            "relationships": {
+                "versionOf": "name:OpenSSH"
+            },
+            "type": "Software version"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "7.6",
+                "release_date": "2017/10/3"
+            },
+            "name": "OpenSSH Server 7.6",
+            "id": 58,
+            "relationships": {
+                "versionOf": "name:OpenSSH"
+            },
+            "type": "Software version"
+        },
+        {
+            "_comment": "----Metasploit Framework----"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "4.14.4",
+                "release_date": "2017/04/17"
+            },
+            "name": "MSFFramework4.14.4",
+            "id": 59,
+            "relationships": {
+                "versionOf": "name:Metasploit Framework"
+            },
+            "type": "Software version"
+        },
+        {
+            "_comment": "----Services----"
+        },
+        {
+            "_comment": "----Protocol----"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "1"
+            },
+            "name": "SMBServiceV1",
+            "id": 60,
+            "relationships": {},
+            "type": "Protocol"
+        },
+        {
+            "comment": "",
+            "properties": {
+                "version": "2"
+            },
+            "name": "SMBServiceV2",
+            "id": 61,
+            "relationships": {},
+            "type": "Protocol"
+        }
+    ]
+}

@@ -1,0 +1,1388 @@
+{
+    "nodes": [
+
+      {"________________________________________":"_"},
+      {"_comment": "this creates the internet network"},
+      {
+        "name": "The Internet",
+        "type": "Network",
+        "properties":{},
+        "id": 1
+      },
+
+
+      {"________________________________________":"_"},
+      {"_comment": "DMZ and servers"},
+      {
+        "name": "DMZ Network",
+        "type": "Network",
+        "properties":{},
+        "id": 7
+      },
+      {"________________________________________":"_"},
+      {"_comment": "Internal workstation network"},
+      {
+        "name": "Internal Network",
+        "type": "Network",
+        "properties":{},
+        "id": 7
+      },
+
+
+
+
+
+
+      {"________________________________________":"_"},
+      {"_comment": "external firewall connecting internet to internal DMZ"},
+      {
+        "name": "ExternalFW Internet NIC",
+        "type": "NIC",
+        "properties":
+        {
+          "ipAddress":"192.168.22.254",
+          "macAddress": "00:50:56:9C:9D:06",
+          "_acomment": "This assumes port forwarding",
+          "ServiceRules": [
+              "name:Web_Server_Web_SW_Service;*",
+              "name:SW_Mail_SSH_service:*",
+              "name:SW_Mail_mail_service:*"
+          ],
+          "__bcomment": "This assumes normal firewall routing",
+          "NICRules": [
+              "name:Web_Server_NIC:*",
+              "name:SW_Mail_NIC:*"
+          ]
+        },
+        "relationships":
+        {
+          "onNetwork":"name:The Internet"
+        },
+        "id": 3
+      },
+
+
+
+
+      {
+        "name": "ExternalFW Internal Server NIC",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.22.254",
+          "macAddress": "00:50:56:76:9A:61",
+          "_acomment": "This assumes port forwarding",
+          "ServiceRules": [
+              "name:Web_Server_Web_SW_Service;*",
+              "name:SW_Mail_SSH_service:*",
+              "name:SW_Mail_mail_service:*"
+          ],
+          "_acomment": "This assumes normal firewall routing",
+          "NICRules": [
+              "name:The Internet:*"
+          ]
+        },
+        "relationships":
+        {
+          "onNetwork":"name:DMZ Network"
+        },
+        "id": 5
+      },
+
+      {
+        "name": "SW_PFSenseExternalFW",
+        "type": "RunningSoftware",
+        "comment": "PFSense1 running on External FW",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:pfSense 2.1"]
+        },
+        "id": 2
+      },
+
+
+
+
+
+
+
+     {
+        "name": "SW_Service_SSH_PFSenseExternalFW",
+        "type": "Service",
+        "comment": "ssh service of firewall",
+        "properties":{
+          "port":23
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:SW_PFSenseExternalFW"],
+          "onNIC":["name:ExternalFW Internal Server NIC"],
+          "runsProtocol":["name:SSHProtocol"]
+        },
+        "id": 2
+      },
+
+     {
+        "name": "SW_Service_HTTP_PFSenseExternalFW",
+        "type": "Service",
+        "comment": "web service of firewall",
+        "properties":{
+          "port":80
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:SW_PFSenseExternalFW"],
+          "onNIC":["name:ExternalFW Internal Server NIC"],
+          "runsProtocol":["name:HTTPProtocol"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "ExternalFW",
+        "hostname": "ExternalFW",
+        "type": "Server",
+        "comment": "PFSense1",
+        "properties":{},
+        "relationships":
+        {
+          "runsSoftware":["name:SW_PFSenseExternalFW"],
+          "hasNIC":["name:ExternalFW Internet NIC","name:ExternalFW Internal Server NIC"]
+        },
+        "id": 2
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {"________________________________________":"_"},
+      {"_comment": "mail server"},
+
+
+
+
+      {
+        "name": "Mail Server NIC",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.23.103",
+          "macAddress": "00:50:56:C0:A0:3F",
+          "_acomment": "This assumes port forwarding",
+          "ServiceRules": [
+              "name:SW_Mail_SSH_service:*",
+              "name:SW_Mail_mail_service:*"
+          ],
+          "_bcomment": "This assumes normal firewall routing"
+        },
+        "relationships":
+        {
+          "onNetwork":"name:DMZ Network"
+        },
+        "id": 13
+      },
+
+      {
+        "name": "SW_Mail_server_OS",
+        "type": "RunningSoftware",
+        "comment": "OS of mail server",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:Windows 2003"]
+        },
+        "id": 2
+      },
+
+
+
+
+      {
+        "name": "SW_Mail_mail",
+        "type": "RunningSoftware",
+        "comment": "mail sw of mail server",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:a"]
+        },
+        "id": 2
+      },
+
+
+
+
+
+
+
+     {
+        "name": "SW_Mail_mail_service",
+        "type": "Service",
+        "comment": "web service of web server",
+        "properties":{
+          "port":80
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:SW_Mail_mail"],
+          "onNIC":["name:Mail Server NIC"],
+          "runsProtocol":["name:HTTPProtocol"]
+        },
+        "id": 2
+      },
+
+
+
+      {
+        "name": "SW_Mail_SSH",
+        "type": "RunningSoftware",
+        "comment": "ssh sw of mail server",
+        "properties":{
+          "port":22
+        },
+        "relationships":
+        {
+          "ofSoftwareType":["name:OpenSSH Server 7.6"]
+        },
+        "id": 2
+      },
+
+     {
+        "name": "SW_Mail_SSH_service",
+        "type": "Service",
+        "comment": "ssh service of web server",
+        "properties":{
+          "port":22
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:SW_Mail_SSH"],
+          "onNIC":["name:Mail Server NIC"],
+          "runsProtocol":["name:SSHProtocol"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "Mail Server",
+        "type": "Server",
+        "comment": "",
+        "properties":{},
+        "relationships":
+        {
+          "runsSoftware":["name:SW_Mail_mail", "name:SW_Mail_server_OS", "name:SW_Mail_SSH"],
+          "hasNIC":["name:Mail Server NIC"]
+        },
+        "id": 10
+      },
+
+
+
+
+
+      {"________________________________________":"_"},
+      {"_comment": "dns server"},
+      {
+        "name": "DNS Server NIC",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.23.104",
+          "macAddress": "00:50:56:45:86:F8"
+        },
+        "relationships":
+        {
+          "onNetwork":"name:DMZ Network"
+        },
+        "id": 14
+      },
+
+
+      {
+        "name": "DNS_Server_OS_SW",
+        "type": "RunningSoftware",
+        "comment": "os sw of dns server",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:Windows 2012"]
+        },
+        "id": 2
+      },
+      {
+        "name": "DNS_Server_DNS_SW",
+        "type": "RunningSoftware",
+        "comment": "dns sw of dns server",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:CentOS DNS Server v1.65"]
+        },
+        "id": 2
+      },
+
+     {
+        "name": "DNS_Server_DNS_SW_Service",
+        "type": "Service",
+        "comment": "dns service of dns server",
+        "properties":{
+          "port":53
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:DNS_Server_DNS_SW"],
+          "onNIC":["name:DNS Server NIC"],
+          "runsProtocol":["name:DNSProtocol"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "DNS Server",
+        "type": "Server",
+        "comment": "",
+        "properties":{},
+        "relationships":
+        {
+          "runsSoftware":["name:DNS_Server_OS_SW", "name:DNS_Server_DNS_SW"],
+          "hasNIC":["name:DNS Server NIC"]
+
+        },
+        "id": 11
+      },
+
+
+
+     {
+        "name": "DNS_Server_DNS_SW_Service",
+        "type": "Service",
+        "comment": "dns service of dns server",
+        "properties":{
+          "port":80
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:DNS_Server_DNS_SW"],
+          "onNIC":["name:DNS Server NIC"],
+          "runsProtocol":["name:HTTPProtocol"]
+        },
+        "id": 2
+      },
+
+
+
+
+
+
+
+      {"________________________________________":"_"},
+      {"_comment": "web server"},
+      {
+        "name": "Web Server NIC",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.23.101",
+          "macAddress": "00:50:56:BC:21:DA"
+        },
+        "relationships":
+        {
+          "onNetwork":"name:DMZ Network"
+        },
+        "id": 15
+      },
+
+      {
+        "name": "Web_Server_OS_SW",
+        "type": "RunningSoftware",
+        "comment": "os sw of web server",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:CentOS 4.7"]
+        },
+        "id": 2
+      },
+      {
+        "name": "Web_Server_Web_SW",
+        "type": "RunningSoftware",
+        "comment": "web sw of web server",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:nginx 1.4"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "Web Server",
+        "type": "Server",
+        "comment": "",
+        "properties":{},
+        "relationships":
+        {
+          "runsSoftware":["name:Web_Server_Web_SW", "name:Web_Server_OS_SW"],
+          "hasNIC":["name:Web Server NIC"]
+        },
+        "id": 12
+      },
+
+
+
+      {
+        "name": "Web_Server_Web_SW_Service",
+        "type": "Service",
+        "comment": "web service of web server",
+        "properties":{
+          "port":80
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:Web_Server_Web_SW"],
+          "onNIC":["name:Web Server NIC"],
+          "runsProtocol":["name:HTTPProtocol"]
+        },
+        "id": 2
+      },
+
+
+
+
+      {"________________________________________":"_"},
+      {"_comment": "internal firewall connecting internal DMZ to internal 1"},
+      {
+        "name": "DMZ_Internal_FW DMZ NIC",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.23.253",
+          "macAddress": "00:1C:14:2D:CD:CB",
+
+          "ServiceRules": [
+              "name:Web_Server_Web_SW_Service;*",
+              "name:SW_Mail_SSH_service:*",
+              "name:SW_Mail_mail_service:*"
+          ],
+          "_acomment": "This assumes normal firewall routing",
+          "NICRules": [
+              "name:Web_Server_NIC:*",
+              "name:SW_Mail_NIC:*"
+          ]
+
+      },
+        "relationships":
+        {
+          "onNetwork":"name:DMZ Network"
+        },
+
+        "id": 3
+      },
+      {
+        "name": "DMZ_Internal_FW Internal 1 NIC",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.24.253",
+          "macAddress": "00:1C:14:4C:1B:E5"
+      },
+        "relationships":
+        {
+          "onNetwork":"name:Internal Network"
+        },
+
+        "id": 3
+      },
+      {
+        "hostname": "DMZ_Internal_FW",
+        "name": "DMZ_Internal_FW",
+        "type": "Server",
+        "comment": "",
+        "relationships":
+        {
+          "runsSoftware":["name:pfSense 2.1"],
+          "hasNIC":["name:DMZ_Internal_FW DMZ NIC", "name:DMZ_Internal_FW Internal 1 NIC"]
+        },
+        "properties":{},
+        "id": 2
+      },
+
+
+
+
+
+
+
+
+
+      {"________________________________________":"_"},
+      {"_comment": "internal 1 objects"},
+
+
+
+      {"_comment": "internal 1 file share"},
+      {
+        "name": "Internal 1 file share NIC",
+        "type": "NIC",
+        "properties":{
+          "macAddress":"00:1C:14:4B:6E:02",
+          "ipAddress":""
+        },
+        "relationships":
+        {
+          "onNetwork":"name:Internal Network"
+        },
+        "id": 22
+      },
+
+
+      {"_comment": "file share server"},
+      {
+        "name": "Internal 1 File Share Server",
+        "type": "Server",
+        "comment": "",
+        "relationships":
+        {
+          "runsSoftware":["name:Windows 2008"],
+          "hasNIC":["name:Internal 1 file share NIC"]
+
+        },
+        "properties":{
+          "macAddress":"",
+          "ipAddress":""
+        },
+        "id": 18
+      },
+
+
+
+
+
+
+
+
+
+
+      {"________________________________________":"_"},
+      {"________________________________________":"_"},
+      {"_comment": "TODO Clone 6x"},
+      {"________________________________________":"_"},
+      {"________________________________________":"_"},
+
+
+      {"________________________________________":"_"},
+
+
+
+
+      {"________________________________________":"_"},
+      {
+        "name": "Workstation_NIC_1",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.26.111",
+          "macAddress": "00:1C:14:A5:E6:53"
+        },
+        "relationships":
+        {
+          "onNetwork":"name:Internal Network"
+        },
+        "id": 22
+      },
+
+
+
+     {
+        "name": "WorkstationOS_1",
+        "type": "RunningSoftware",
+        "comment": "Operating System for workstation",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:Windows 7 SP1"]
+        },
+        "id": 2
+      },
+
+
+      {
+        "name": "WorkstationOS_1_RDP_OS",
+        "type": "Service",
+        "comment": "rdp for workstation",
+        "properties":{
+          "port":3389
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_1"],
+          "onNIC":["name:Workstation_NIC_1"],
+          "runsProtocol":["name:MS_RDP_Protocol"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_1_SMB_OS",
+        "type": "Service",
+        "comment": "smb for workstation",
+        "properties":{
+          "port":445
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_1"],
+          "onNIC":["name:Workstation_NIC_1"],
+          "runsProtocol":["name:SMBProtocolV1"]
+        },
+        "id": 2
+      },
+
+
+
+      {
+        "name": "Workstation_1",
+        "type": "Server",
+        "comment": "",
+        "properties":{},
+        "relationships":
+        {
+          "runsSoftware":["name:WorkstationOS_1"],
+          "hasNIC":["name:Workstation_NIC_1"]
+        },
+        "id": 18
+      },
+
+
+      {"________________________________________":"_"},
+      {
+        "name": "Workstation_NIC_2",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.26.111",
+          "macAddress": "00:1C:14:A5:E6:54"
+        },
+        "relationships":
+        {
+          "onNetwork":"name:Internal Network"
+        },
+        "id": 22
+      },
+      {
+        "name": "WorkstationOS_2",
+        "type": "RunningSoftware",
+        "comment": "Operating System for workstation",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:Windows 7 SP1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_2_RDP_OS",
+        "type": "Service",
+        "comment": "rdp for workstation",
+        "properties":{
+          "port":3389
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_2"],
+          "onNIC":["name:Workstation_NIC_2"],
+          "runsProtocol":["name:MS_RDP_Protocol"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_2_SMB_OS",
+        "type": "Service",
+        "comment": "smb for workstation",
+        "properties":{
+          "port":445
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_2"],
+          "onNIC":["name:Workstation_NIC_2"],
+          "runsProtocol":["name:SMBProtocolV1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "Workstation_2",
+        "type": "Server",
+        "comment": "",
+        "properties":{},
+        "relationships":
+        {
+          "runsSoftware":["name:WorkstationOS_2"],
+          "hasNIC":["name:Workstation_NIC_2"]
+        },
+        "id": 18
+      },
+
+
+
+
+
+
+
+
+
+      {"________________________________________":"_"},
+      {
+        "name": "Workstation_NIC_3",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.26.112",
+          "macAddress": "00:1C:14:BB:E1:48"
+        },
+        "relationships":
+        {
+          "onNetwork":"name:Internal Network"
+        },
+        "id": 22
+      },
+      {
+        "name": "WorkstationOS_3",
+        "type": "RunningSoftware",
+        "comment": "Operating System for workstation",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:Windows 7 SP1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_3_RDP_OS",
+        "type": "Service",
+        "comment": "rdp for workstation",
+        "properties":{
+          "port":3389
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_3"],
+          "onNIC":["name:Workstation_NIC_3"],
+          "runsProtocol":["name:MS_RDP_Protocol"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_3_SMB_OS",
+        "type": "Service",
+        "comment": "smb for workstation",
+        "properties":{
+          "port":445
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_3"],
+          "onNIC":["name:Workstation_NIC_3"],
+          "runsProtocol":["name:SMBProtocolV1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "Workstation_3",
+        "type": "Server",
+        "comment": "",
+        "properties":{},
+        "relationships":
+        {
+          "runsSoftware":["name:WorkstationOS_3"],
+          "hasNIC":["name:Workstation_NIC_3"]
+        },
+        "id": 18
+      },
+
+
+
+
+
+      {"________________________________________":"_"},
+      {
+        "name": "Workstation_NIC_4",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.26.113",
+          "macAddress": "00:1C:14:D2:11:AA"
+        },
+        "relationships":
+        {
+          "onNetwork":"name:Internal Network"
+        },
+        "id": 22
+      },
+      {
+        "name": "WorkstationOS_4",
+        "type": "RunningSoftware",
+        "comment": "Operating System for workstation",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:Windows 7 SP1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_4_RDP_OS",
+        "type": "Service",
+        "comment": "rdp for workstation",
+        "properties":{
+          "port":3389
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_4"],
+          "onNIC":["name:Workstation_NIC_4"],
+          "runsProtocol":["name:MS_RDP_Protocol"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_4_SMB_OS",
+        "type": "Service",
+        "comment": "smb for workstation",
+        "properties":{
+          "port":445
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_4"],
+          "onNIC":["name:Workstation_NIC_4"],
+          "runsProtocol":["name:SMBProtocolV1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "Workstation_4",
+        "type": "Server",
+        "comment": "",
+        "properties":{},
+        "relationships":
+        {
+          "runsSoftware":["name:WorkstationOS_4"],
+          "hasNIC":["name:Workstation_NIC_4"]
+        },
+        "id": 18
+      },
+
+
+
+
+
+
+
+      {"________________________________________":"_"},
+      {
+        "name": "Workstation_NIC_5",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.26.114",
+          "macAddress": "00:1C:44:EA:DD:44"
+        },
+        "relationships":
+        {
+          "onNetwork":"name:Internal Network"
+        },
+        "id": 22
+      },
+      {
+        "name": "WorkstationOS_5",
+        "type": "RunningSoftware",
+        "comment": "Operating System for workstation",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:Windows 7 SP1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_5_RDP_OS",
+        "type": "Service",
+        "comment": "rdp for workstation",
+        "properties":{
+          "port":3389
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_5"],
+          "onNIC":["name:Workstation_NIC_5"],
+          "runsProtocol":["name:MS_RDP_Protocol"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_5_SMB_OS",
+        "type": "Service",
+        "comment": "smb for workstation",
+        "properties":{
+          "port":445
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_5"],
+          "onNIC":["name:Workstation_NIC_5"],
+          "runsProtocol":["name:SMBProtocolV1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "Workstation_5",
+        "type": "Server",
+        "comment": "",
+        "properties":{},
+        "relationships":
+        {
+          "runsSoftware":["name:WorkstationOS_5"],
+          "hasNIC":["name:Workstation_NIC_5"]
+        },
+        "id": 18
+      },
+
+
+
+
+
+
+      {"________________________________________":"_"},
+      {
+        "name": "Workstation_NIC_6",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.26.115",
+          "macAddress": "00:1C:14:DD:EE:13"
+        },
+        "relationships":
+        {
+          "onNetwork":"name:Internal Network"
+        },
+        "id": 22
+      },
+      {
+        "name": "WorkstationOS_6",
+        "type": "RunningSoftware",
+        "comment": "Operating System for workstation",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:Windows 7 SP1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_6_RDP_OS",
+        "type": "Service",
+        "comment": "rdp for workstation",
+        "properties":{
+          "port":3389
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_6"],
+          "onNIC":["name:Workstation_NIC_6"],
+          "runsProtocol":["name:MS_RDP_Protocol"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_6_SMB_OS",
+        "type": "Service",
+        "comment": "smb for workstation",
+        "properties":{
+          "port":445
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_6"],
+          "onNIC":["name:Workstation_NIC_6"],
+          "runsProtocol":["name:SMBProtocolV1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "Workstation_6",
+        "type": "Server",
+        "comment": "",
+        "properties":{},
+        "relationships":
+        {
+          "runsSoftware":["name:WorkstationOS_6"],
+          "hasNIC":["name:Workstation_NIC_6"]
+        },
+        "id": 18
+      },
+
+
+
+
+      {"________________________________________":"_"},
+      {
+        "name": "Workstation_NIC_7",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.26.116",
+          "macAddress": "00:1C:14:34:12:16"
+        },
+        "relationships":
+        {
+          "onNetwork":"name:Internal Network"
+        },
+        "id": 22
+      },
+      {
+        "name": "WorkstationOS_7",
+        "type": "RunningSoftware",
+        "comment": "Operating System for workstation",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:Windows 7 SP1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_7_RDP_OS",
+        "type": "Service",
+        "comment": "rdp for workstation",
+        "properties":{
+          "port":3389
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_7"],
+          "onNIC":["name:Workstation_NIC_7"],
+          "runsProtocol":["name:MS_RDP_Protocol"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_7_SMB_OS",
+        "type": "Service",
+        "comment": "smb for workstation",
+        "properties":{
+          "port":445
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_7"],
+          "onNIC":["name:Workstation_NIC_7"],
+          "runsProtocol":["name:SMBProtocolV1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "Workstation_7",
+        "type": "Server",
+        "comment": "",
+        "properties":{},
+        "relationships":
+        {
+          "runsSoftware":["name:WorkstationOS_7"],
+          "hasNIC":["name:Workstation_NIC_7"]
+        },
+        "id": 18
+      },
+
+
+
+
+
+
+
+      {"________________________________________":"_"},
+      {
+        "name": "Workstation_NIC_8",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.26.117",
+          "macAddress": "00:1C:11:87:22:18"
+        },
+        "relationships":
+        {
+          "onNetwork":"name:Internal Network"
+        },
+        "id": 22
+      },
+      {
+        "name": "WorkstationOS_8",
+        "type": "RunningSoftware",
+        "comment": "Operating System for workstation",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:Windows 7 SP1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_8_RDP_OS",
+        "type": "Service",
+        "comment": "rdp for workstation",
+        "properties":{
+          "port":3389
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_8"],
+          "onNIC":["name:Workstation_NIC_8"],
+          "runsProtocol":["name:MS_RDP_Protocol"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_8_SMB_OS",
+        "type": "Service",
+        "comment": "smb for workstation",
+        "properties":{
+          "port":445
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_8"],
+          "onNIC":["name:Workstation_NIC_8"],
+          "runsProtocol":["name:SMBProtocolV1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "Workstation_8",
+        "type": "Server",
+        "comment": "",
+        "properties":{},
+        "relationships":
+        {
+          "runsSoftware":["name:WorkstationOS_8"],
+          "hasNIC":["name:Workstation_NIC_8"]
+        },
+        "id": 18
+      },
+
+
+
+
+      {"________________________________________":"_"},
+      {
+        "name": "Workstation_NIC_9",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.26.118",
+          "macAddress": "00:1C:17:98:17:19"
+        },
+        "relationships":
+        {
+          "onNetwork":"name:Internal Network"
+        },
+        "id": 22
+      },
+      {
+        "name": "WorkstationOS_9",
+        "type": "RunningSoftware",
+        "comment": "Operating System for workstation",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:Windows 7 SP1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_9_RDP_OS",
+        "type": "Service",
+        "comment": "rdp for workstation",
+        "properties":{
+          "port":3389
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_9"],
+          "onNIC":["name:Workstation_NIC_9"],
+          "runsProtocol":["name:MS_RDP_Protocol"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_9_SMB_OS",
+        "type": "Service",
+        "comment": "smb for workstation",
+        "properties":{
+          "port":445
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_9"],
+          "onNIC":["name:Workstation_NIC_9"],
+          "runsProtocol":["name:SMBProtocolV1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "Workstation_9",
+        "type": "Server",
+        "comment": "",
+        "properties":{},
+        "relationships":
+        {
+          "runsSoftware":["name:WorkstationOS_9"],
+          "hasNIC":["name:Workstation_NIC_9"]
+        },
+        "id": 18
+      },
+
+
+
+
+
+
+
+
+      {"________________________________________":"_"},
+      {
+        "name": "Workstation_NIC_10",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.26.119",
+          "macAddress": "00:1C:17:77:EE:10"
+        },
+        "relationships":
+        {
+          "onNetwork":"name:Internal Network"
+        },
+        "id": 22
+      },
+      {
+        "name": "WorkstationOS_10",
+        "type": "RunningSoftware",
+        "comment": "Operating System for workstation",
+        "properties":{},
+        "relationships":
+        {
+          "ofSoftwareType":["name:Windows 7 SP1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_10_RDP_OS",
+        "type": "Service",
+        "comment": "rdp for workstation",
+        "properties":{
+          "port":3389
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_10"],
+          "onNIC":["name:Workstation_NIC_10"],
+          "runsProtocol":["name:MS_RDP_Protocol"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "WorkstationOS_10_SMB_OS",
+        "type": "Service",
+        "comment": "smb for workstation",
+        "properties":{
+          "port":445
+        },
+        "relationships":
+        {
+          "runBySoftware":["name:WorkstationOS_10"],
+          "onNIC":["name:Workstation_NIC_10"],
+          "runsProtocol":["name:SMBProtocolV1"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "Workstation_10",
+        "type": "Server",
+        "comment": "",
+        "properties":{},
+        "relationships":
+        {
+          "runsSoftware":["name:WorkstationOS_10"],
+          "hasNIC":["name:Workstation_NIC_10"]
+        },
+        "id": 18
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {"________________________________________":"_"}
+
+    ]
+}

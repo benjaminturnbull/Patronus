@@ -1,0 +1,625 @@
+{
+    "nodes": [
+
+
+      {"_comment": "---------Attack types------------"},
+      {
+        "name": "Attack-Type-MITM",
+        "type": "Attack Type",
+        "comment":"",
+        "properties":{},
+        "id": 1
+      },
+
+
+
+
+
+
+      {"_comment": "---------Local or Remote Vector------------"},
+
+
+      {
+        "name": "LocalVector",
+        "type": "Vector",
+        "comment":"",
+        "properties":{},
+        "id": 1
+      },
+      {
+        "name": "RemoteVector",
+        "type": "Vector",
+        "comment":"",
+        "properties":{},
+        "id": 1
+      },
+
+
+
+
+
+
+
+
+      {"_comment": "---------Impact------------"},
+
+
+      {
+        "name": "NoImpact",
+        "type": "ImpactLevel",
+        "comment":"",
+        "properties":{},
+        "id": 1
+      },
+
+      {
+        "name": "PartialImpact",
+        "type": "ImpactLevel",
+        "comment":"",
+        "properties":{},
+        "id": 1
+      },
+
+      {
+        "name": "CompleteImpact",
+        "type": "ImpactLevel",
+        "comment":"",
+        "properties":{},
+        "id": 1
+      },
+
+
+
+
+
+      {"_comment": "---------Access levels------------"},
+
+
+      {
+        "name": "NoAccess",
+        "type": "Access Level",
+        "comment":"",
+        "properties":{},
+        "id": 1
+      },
+      {
+        "name": "UserLevelAccess",
+        "type": "Access Level",
+        "comment":"",
+        "properties":{},
+        "id": 1
+      },
+      {
+        "name": "AdministratorLevelAccess",
+        "type": "Access Level",
+        "comment":"",
+        "properties":{},
+        "id": 1
+      },
+      {
+        "name": "SystemLevelAccess",
+        "type": "Access Level",
+        "comment":"",
+        "properties":{},
+        "id": 1
+      },
+
+
+
+      {"_comment": "---------CWEs------------"},
+      {
+        "name": "CWE78",
+        "type": "CWE",
+        "comment":"OS Command Injection",
+        "properties":{
+        "cwe_id":"78"
+        },
+        "id": 1
+      },
+      {
+        "name": "CWE20",
+        "type": "CWE",
+        "comment":"Improper input validation",
+        "properties":{
+        "cwe_id":"78"
+        },
+        "id": 1
+      },
+      {
+        "name": "CWE189",
+        "type": "CWE",
+        "comment":"Numeric errors",
+        "properties":{
+        "cwe_id":"189"
+        },
+        "id": 1
+      },
+      {
+        "name": "CWE119",
+        "type": "CWE",
+        "comment":"Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "properties":{
+        "cwe_id":"119"
+        },
+        "id": 1
+      },
+
+
+
+
+
+      {"_comment": "---------CVEs------------"},
+
+
+
+
+	{
+		"name"			: "CVE-2016-10709",
+        "type"          : "Reported Vulnerability",
+        "comment"       :"",
+        "id": 1,
+        "properties": {
+          "vuln_id": [
+            "CVE-2016-10709",
+            "EXPLOIT-DB 39709"
+          ],
+          "date": "2018-01-21",
+          "description": "pfSense before 2.3 allows remote authenticated users to execute arbitrary OS commands via a '|' character in the status_rrd_graph_img.php graph parameter, related to _rrd_graph_img.php.",
+          "references": [
+            "https://www.security-assessment.com/files/documents/advisory/pfsenseAdvisory.pdf",
+            "https://www.rapid7.com/db/modules/exploit/unix/http/pfsense_graph_injection_exec",
+            "https://www.pfsense.org/security/advisories/pfSense-SA-16_01.webgui.asc "
+          ],
+          "score": 4.3,
+          "complexity": "Medium",
+          "authentication": "None",
+          "attackTypes": []
+        },
+      "relationships":{
+          "confidentiality": "name:PartialImpact",
+          "integrity": "name:NoImpact",
+          "availability": "name:NoImpact",
+          "prerequisites": [
+            "name:UserLevelAccess"
+          ],
+          "outcomes": [
+            "name:SystemLevelAccess"
+          ],
+          "CWEs": [
+            "name:CWE78"
+          ],
+          "vector": [
+            "name:LocalVector"
+          ]
+      }
+	},
+
+	{
+		"name"			: "CVE-2017-0143",
+        "type"          : "Reported Vulnerability",
+        "comment"       :"",
+        "properties": {
+          "vuln_id": [
+            "CVE-2017-0143",
+            "MS17-010",
+            "EXPLOIT-DB 43970",
+            "SECTRACK 1037991",
+            "EXPLOIT-DB 41891"
+          ],
+          "date": "2017-03-16",
+          "description": "The SMBv1 server in Microsoft Windows Vista SP2; Windows Server 2008 SP2 and R2 SP1; Windows 7 SP1; Windows 8.1; Windows Server 2012 Gold and R2; Windows RT 8.1; and Windows 10 Gold, 1511, and 1607; and Windows Server 2016 allows remote attackers to execute arbitrary code via crafted packets, aka Windows SMB Remote Code Execution Vulnerability. This vulnerability is different from those described in CVE-2017-0144, CVE-2017-0145, CVE-2017-0146, and CVE-2017-0148.",
+          "references": [
+            "https://www.exploit-db.com/exploits/43970/",
+            "http://www.securitytracker.com/id/1037991",
+            "https://www.exploit-db.com/exploits/41987/",
+            "https://www.exploit-db.com/exploits/41891/",
+            "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2017-0143 CONFIRM",
+            "http://www.securityfocus.com/bid/96703"
+          ],
+          "score": 9.3,
+          "complexity": "Medium",
+          "authentication": "None",
+          "access": "None",
+          "attackTypes": []
+        },
+      "relationships":{
+          "confidentiality": "name:CompleteImpact",
+          "integrity": "name:CompleteImpact",
+          "availability": "name:CompleteImpact",
+          "prerequisites": [
+            "name:UserLevelAccess"
+          ],
+          "outcomes": [
+            "name:SystemLevelAccess"
+          ],
+          "CWEs": [
+            "name:CWE20"
+          ],
+          "vector": [
+            "name:LocalVector",
+            "name:RemoteVector"
+          ]
+      },
+        "id": 1
+    },
+
+
+	{
+		"name"			: "CVE-2013-2028",
+        "type"          : "Reported Vulnerability",
+        "comment"       :"",
+        "properties": {
+          "vuln_id": [
+            "BID 59699",
+            "GLSA-201310-04",
+            "FEDORA-2013-7560"
+          ],
+          "date": "2013-07-19",
+          "description": "The ngx_http_parse_chunked function in http ngx_http_parse.c in nginx 1.3.9 through 1.4.0 allows remote attackers to cause a denial of service crash and execute arbitrary code via a chunked Transfer-Encoding request with a large chunk size, which triggers an integer signedness error and a stack-based buffer overflow.",
+          "references": [
+            "http://www.securityfocus.com/bid/59699",
+            "http://www.vnsecurity.net/2013/05/analysis-of-nginx-cve-2013-2028/",
+            "http://packetstormsecurity.com/files/121675/Nginx-1.3.9-1.4.0-Denial-Of-Service.html",
+            "http://security.gentoo.org/glsa/glsa-201310-04.xml",
+            "https://github.com/rapid7/metasploit-framework/pull/1834",
+            "http://mailman.nginx.org/pipermail/nginx-announce/2013/000112.html",
+            "http://nginx.org/download/patch.2013.chunked.txt ",
+            "http://lists.fedoraproject.org/pipermail/package-announce/2013-May/105176.html"],
+          "score": 7.5,
+          "complexity": "Low",
+          "authentication": "None",
+          "access": "None",
+          "attackTypes": []
+        },
+      "relationships":{
+          "confidentiality": "name:PartialImpact",
+          "integrity": "name:PartialImpact",
+          "availability": "name:PartialImpact",
+          "prerequisites": [
+          ],
+          "outcomes": [
+            "name:SystemLevelAccess"
+          ],
+          "CWEs": [
+            "name:CWE189"
+          ],
+          "vector": [
+            "name:LocalVector",
+            "name:RemoteVector"
+          ]
+      },
+        "id": 1
+    },
+
+      {
+        "name": "CVE-2013-2028_SW_Link1",
+        "type": "CVE SW Prerequisites",
+        "comment": "",
+        "properties":{},
+        "relationships": {
+          "cve": "name:CVE-2013-2028",
+          "andSWReqs": [
+            "name:Ubuntu 13.04",
+            "name:nginx 1.4"
+          ],
+          "notSWReqs": []
+        },
+        "id": 1
+      },
+      {
+        "name": "CVE-2013-2028_SW_Link2",
+        "type": "CVE SW Prerequisites",
+        "comment": "",
+        "properties":{},
+        "relationships": {
+          "cve": "name:CVE-2013-2028",
+          "andSWReqs": [
+            "name:CentOS 7.4",
+            "name:nginx 1.4"
+          ],
+          "notSWReqs": []
+        },
+        "id": 1
+      },
+      {
+        "name": "CVE-2013-2028_SW_Link3",
+        "type": "CVE SW Prerequisites",
+        "comment": "",
+        "properties":{},
+        "relationships": {
+          "cve": "name:CVE-2013-2028",
+          "andSWReqs": [
+            "name:CentOS 4.7",
+            "name:nginx 1.4"
+          ],
+          "notSWReqs": []
+        },
+        "id": 1
+      },
+
+
+
+
+
+    {"_comment": "---------CVE SW Links------------"},
+
+      {
+        "name": "CVE-2017-0143_SW_Link1",
+        "type": "CVE SW Prerequisites",
+        "comment": "",
+        "properties":{},
+        "relationships": {
+          "cve": "name:CVE-2017-0143",
+          "andSWReqs": [
+            "name:Windows 7 SP1"
+          ],
+          "notSWReqs": [
+            "name:Win7 Update MS17-010"
+          ]
+        },
+        "id": 1
+      },
+
+      {
+        "name": "CVE-2017-0143_SW_Link2",
+        "type": "CVE SW Prerequisites",
+        "comment": "",
+        "properties":{},
+        "relationships": {
+          "cve": "name:CVE-2017-0143",
+          "andSWReqs": [
+            "name:Windows 7"
+          ],
+          "notSWReqs": [
+            "name:Win7 Update MS17-010"
+          ]
+        },
+        "id": 1
+      },
+
+      {
+        "name": "CVE-2017-0143_SW_Link3",
+        "type": "CVE SW Prerequisites",
+        "comment": "",
+        "properties":{},
+        "relationships": {
+          "cve": "name:CVE-2017-0143",
+          "andSWReqs": [
+            "name:Windows 2008"
+          ],
+          "notSWReqs": [
+            "name:Win 2008 Update MS17-010"
+          ]
+        },
+        "id": 1
+      },
+
+      {
+        "name": "CVE-2017-0143_SW_Link4",
+        "type": "CVE SW Prerequisites",
+        "comment": "",
+        "properties":{},
+        "relationships": {
+          "cve": "name:CVE-2017-0143",
+          "andSWReqs": [
+            "name:Windows 2008 R2"
+          ],
+          "notSWReqs": [
+            "name:Win 2008 Update MS17-010"
+          ]
+        },
+        "id": 1
+      },
+
+
+	{
+		"name"			: "CVE-2009-2692",
+        "type"          : "Reported Vulnerability",
+        "comment"       :"",
+        "properties": {
+          "vuln_id": [
+            "CVE-2009-2692",
+            "OSVDB-56992"
+          ],
+          "date": "2009-08-05",
+          "description": "The Linux kernel 2.6.0 through 2.6.30.4, and 2.4.4 through 2.4.37.4, does not initialize all function pointers for socket operations in proto_ops structures, which allows local users to trigger a NULL pointer dereference and gain privileges by using mmap to map page zero, placing arbitrary code on this page, and then invoking an unavailable operation, as demonstrated by the sendpage operation (sock_sendpage function) on a PF_PPPOX socket.",
+          "references": [
+            "http://www.securityfocus.com/archive/1/archive/1/505751/100/0/threaded",
+            "http://www.securityfocus.com/archive/1/archive/1/505912/100/0/threaded",
+            "http://www.exploit-db.com/exploits/19933",
+            "http://www.exploit-db.com/exploits/9477",
+            "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=e694958388c50148389b0e9b9e9e8945cf0f1b98",
+            "http://www.kernel.org/pub/linux/kernel/v2.4/ChangeLog-2.4.37.5",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=516949",
+            "http://rhn.redhat.com/errata/RHSA-2009-1222.html",
+            "http://www.vupen.com/english/advisories/2009/3316"],
+          "score": 7.2,
+          "complexity": "Low",
+          "authentication": "None",
+          "access": "None",
+          "attackTypes": []
+        },
+      "relationships":{
+          "confidentiality": "name:CompleteImpact",
+          "integrity": "name:CompleteImpact",
+          "availability": "name:CompleteImpact",
+          "prerequisites": [
+          ],
+          "outcomes": [
+            "name:SystemLevelAccess"
+          ],
+          "CWEs": [
+            "name:CWE119"
+          ],
+          "vector": [
+            "name:LocalVector"
+          ]
+      },
+        "id": 1
+    },
+
+      {
+        "name": "CVE-2009-2692_SW_Link1",
+        "type": "CVE SW Prerequisites",
+        "comment": "",
+        "properties":{},
+        "relationships": {
+          "cve": "name:CVE-2009-2692",
+          "andSWReqs": [
+            "name:Ubuntu 13.04"
+          ],
+          "notSWReqs": []
+        },
+        "id": 1
+      },
+      {
+        "name": "CVE-2009-2692_SW_Link2",
+        "type": "CVE SW Prerequisites",
+        "comment": "",
+        "properties":{},
+        "relationships": {
+          "cve": "name:CVE-2009-2692",
+          "andSWReqs": [
+            "name:CentOS 4.6"
+          ],
+          "notSWReqs": []
+        },
+        "id": 1
+      },
+      {
+        "name": "CVE-2009-2692_SW_Link3",
+        "type": "CVE SW Prerequisites",
+        "comment": "",
+        "properties":{},
+        "relationships": {
+          "cve": "name:CVE-2009-2692",
+          "andSWReqs": [
+            "name:CentOS 4.7"
+          ],
+          "notSWReqs": []
+        },
+        "id": 1
+      },
+      {
+        "name": "CVE-2009-2692_SW_Link4",
+        "type": "CVE SW Prerequisites",
+        "comment": "",
+        "properties":{},
+        "relationships": {
+          "cve": "name:CVE-2009-2692",
+          "andSWReqs": [
+            "name:CentOS 7.4"
+          ],
+          "notSWReqs": []
+        },
+        "id": 1
+      },
+      {
+        "name": "CVE-2009-2692_SW_Link5",
+        "type": "CVE SW Prerequisites",
+        "comment": "",
+        "properties":{},
+        "relationships": {
+          "cve": "name:CVE-2009-2692",
+          "andSWReqs": [
+            "name:Ubuntu 10.10"
+          ],
+          "notSWReqs": []
+        },
+        "id": 1
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {"_comment": "---------EXPLOITS------------"},
+
+      {
+        "name": "MSF_EternalBlueSMBRemoteWindowsKernelPoolCorruption",
+        "type": "Exploit",
+        "comment": "Eternal blue",
+        "properties":{
+          "reliability":"high"
+        },
+        "relationships": {
+           "exploitsVulnerability":["name:CVE-2017-0143"],
+           "softwareModuleOf":["name:MSFFramework4.14.4"],
+           "requiresService":["name:SMBProtocolV1"],
+          "requiresCPUArchitecture":[]
+        },
+        "id": 1
+      },
+
+
+
+
+      {
+        "name": "MSF_LinuxKernelSendpage",
+        "type": "Exploit",
+        "comment": "Priv escalation",
+        "properties":{
+          "reliability":"high"
+        },
+        "relationships": {
+           "exploitsVulnerability":["name:CVE-2009-2692"],
+           "softwareModuleOf":["name:MSFFramework4.14.4"],
+           "requiresService":[],
+          "requiresCPUArchitecture":[]
+        },
+        "id": 1
+      },
+
+
+
+      {
+        "name": "1_Public_LinuxKernelSendpage",
+        "type": "Exploit",
+        "comment": "Priv escalation",
+        "properties":{
+          "url_link":"https://www.exploit-db.com/exploits/9477/",
+          "reliability":"high"
+        },
+        "relationships": {
+           "exploitsVulnerability":["name:CVE-2009-2692"]
+        },
+        "id": 1
+      },
+
+
+
+
+
+
+
+
+
+
+      {
+        "name": "MSF_NginxChunkedEncodingStackBufferOverflow",
+        "type": "Exploit",
+        "comment": "nginx - only unix",
+        "properties":{
+
+        },
+        "relationships": {
+           "exploitsVulnerability":["name:CVE-2013-2028"],
+           "softwareModuleOf":["name:MSFFramework4.14.4"],
+           "requiresService":["name:SMBProtocolV1"],
+          "requiresCPUArchitecture":[]
+        },
+        "id": 1
+      }
+
+
+
+
+    ]}

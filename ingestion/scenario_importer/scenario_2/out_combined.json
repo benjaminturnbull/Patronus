@@ -1,0 +1,3001 @@
+{
+    "relationships": [],
+    "nodes": [
+        {
+            "properties": {},
+            "relationships": {},
+            "type": "Concept",
+            "comment": "here to ensure relationships",
+            "name": "Data Classification",
+            "id": 1
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "formOf": "name:Data Classification"
+            },
+            "type": "DataClassification",
+            "comment": "",
+            "name": "Ephemeral",
+            "id": 2
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "formOf": "name:Data Classification"
+            },
+            "type": "DataClassification",
+            "comment": "",
+            "name": "Variable",
+            "id": 3
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "formOf": "name:Data Classification"
+            },
+            "type": "DataClassification",
+            "comment": "",
+            "name": "Periodic",
+            "id": 4
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "formOf": "name:Data Classification"
+            },
+            "type": "DataClassification",
+            "comment": "",
+            "name": "Sporadic",
+            "id": 5
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "formOf": "name:Data Classification"
+            },
+            "type": "DataClassification",
+            "comment": "",
+            "name": "Invariable",
+            "id": 6
+        },
+        {
+            "properties": {
+                "classification": []
+            },
+            "relationships": {
+                "dataClassification": "name:Ephemeral"
+            },
+            "type": "DataClassification",
+            "comment": "",
+            "name": "EphemeralDataFormsListing",
+            "id": 7
+        },
+        {
+            "properties": {
+                "classification": [
+                    "NIC",
+                    "RunningSoftware",
+                    "Route",
+                    "Service"
+                ]
+            },
+            "relationships": {
+                "dataClassification": "name:Variable"
+            },
+            "type": "DataClassification",
+            "comment": "",
+            "name": "VariableDataFormsListing",
+            "id": 8
+        },
+        {
+            "properties": {
+                "classification": [
+                    "Workstation",
+                    "Server",
+                    "Firewall"
+                ]
+            },
+            "relationships": {
+                "dataClassification": "name:Periodic"
+            },
+            "type": "DataClassification",
+            "comment": "",
+            "name": "PeriodicDataFormsListing",
+            "id": 9
+        },
+        {
+            "properties": {
+                "classification": [
+                    "Network",
+                    "Reported Vulnerability",
+                    "CVE SW Prerequisites",
+                    "Exploit"
+                ]
+            },
+            "relationships": {
+                "dataClassification": "name:Sporadic"
+            },
+            "type": "DataClassification",
+            "comment": "",
+            "name": "SporadicDataFormsListing",
+            "id": 10
+        },
+        {
+            "properties": {
+                "classification": [
+                    "Concept",
+                    "DataClassification",
+                    "Company",
+                    "Software Family",
+                    "Software version",
+                    "Protocol",
+                    "Attack Type",
+                    "ImpactLevel",
+                    "Access Level",
+                    "Vector",
+                    "CWE",
+                    "Meta"
+                ]
+            },
+            "relationships": {
+                "dataClassification": "name:Invariable"
+            },
+            "type": "DataClassification",
+            "comment": "",
+            "name": "InvariableDataFormsListing",
+            "id": 11
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "dataFormClassifications": [
+                    "name:EphemeralDataFormsListing",
+                    "name:VariableDataFormsListing",
+                    "name:PeriodicDataFormsListing",
+                    "name:SporadicDataFormsListing",
+                    "name:InvariableDataFormsListing"
+                ]
+            },
+            "type": "DataTimeClassification",
+            "comment": "meta classification of data time sets",
+            "name": "",
+            "id": 12
+        },
+        {
+            "type": "Company",
+            "comment": "",
+            "name": "Microsoft Corporation",
+            "id": 14,
+            "properties": {}
+        },
+        {
+            "type": "Company",
+            "comment": "",
+            "name": "Rubicon Communications LLC",
+            "id": 15,
+            "properties": {}
+        },
+        {
+            "type": "Company",
+            "comment": "",
+            "name": "Apple Corporation",
+            "id": 16,
+            "properties": {}
+        },
+        {
+            "type": "Company",
+            "comment": "",
+            "name": "Debian",
+            "id": 17,
+            "properties": {}
+        },
+        {
+            "type": "Company",
+            "comment": "",
+            "name": "FedoraLLC",
+            "id": 18,
+            "properties": {}
+        },
+        {
+            "type": "Company",
+            "comment": "",
+            "name": "Canonical",
+            "id": 19,
+            "properties": {}
+        },
+        {
+            "type": "Company",
+            "comment": "",
+            "name": "RedHatLLC",
+            "id": 20,
+            "properties": {}
+        },
+        {
+            "type": "Company",
+            "comment": "",
+            "name": "OpenSSH",
+            "id": 21,
+            "properties": {}
+        },
+        {
+            "type": "Company",
+            "comment": "",
+            "name": "Rapid7 LLC",
+            "id": 22,
+            "properties": {}
+        },
+        {
+            "type": "Company",
+            "comment": "",
+            "name": "NonIncorporated Open Source Team",
+            "id": 23,
+            "properties": {}
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "manufacturedBy": "name:Microsoft Corporation"
+            },
+            "type": "Software Family",
+            "comment": "",
+            "name": "Microsoft Windows",
+            "id": 25
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "manufacturedBy": "name:Microsoft Corporation"
+            },
+            "type": "Software Family",
+            "comment": "",
+            "name": "Microsoft Update",
+            "id": 26
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "manufacturedBy": "name:Rubicon Communications LLC"
+            },
+            "type": "Software Family",
+            "comment": "",
+            "name": "pfSense",
+            "id": 27
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "manufacturedBy": "name:Apple Corporation"
+            },
+            "type": "Software Family",
+            "comment": "",
+            "name": "OS X",
+            "id": 28
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "manufacturedBy": "name:Microsoft Corporation"
+            },
+            "type": "Software Family",
+            "comment": "",
+            "name": "Microsoft Office",
+            "id": 29
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "manufacturedBy": "name:Debian"
+            },
+            "type": "Software Family",
+            "comment": "",
+            "name": "Debian Linux",
+            "id": 30
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "manufacturedBy": "name:FedoraLLC"
+            },
+            "type": "Software Family",
+            "comment": "",
+            "name": "Fedora",
+            "id": 31
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "manufacturedBy": "name:Canonical"
+            },
+            "type": "Software Family",
+            "comment": "",
+            "name": "Ubuntu",
+            "id": 32
+        },
+        {
+            "properties": {},
+            "relationships": {},
+            "type": "Software Family",
+            "comment": "",
+            "name": "nginx",
+            "id": 33
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "manufacturedBy": "name:RedHatLLC"
+            },
+            "type": "Software Family",
+            "comment": "",
+            "name": "RedHat",
+            "id": 34
+        },
+        {
+            "type": "Software Family",
+            "comment": "",
+            "name": "OpenSSL",
+            "id": 35,
+            "properties": {}
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "manufacturedBy": "name:NonIncorporated Open Source Team"
+            },
+            "type": "Software Family",
+            "comment": "",
+            "name": "OpenSSH",
+            "id": 36
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "manufacturedBy": "name:Rapid7 LLC"
+            },
+            "type": "Software Family",
+            "comment": "",
+            "name": "Metasploit Framework",
+            "id": 37
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "manufacturedBy": "name:RedHatLLC"
+            },
+            "type": "Software Family",
+            "comment": "",
+            "name": "CentOS DNS Server",
+            "id": 38
+        },
+        {
+            "type": "a",
+            "comment": "a",
+            "name": "a",
+            "id": 40,
+            "properties": {}
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "95"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows 95",
+            "id": 43
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "98"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows 98",
+            "id": 44
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "98SE"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows 98SE",
+            "id": 45
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "NT"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows NT",
+            "id": 46
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "NT Server"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows NT Server",
+            "id": 47
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "2000"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows 2000",
+            "id": 48
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "XP"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows XP",
+            "id": 49
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "XP SP1"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows XP SP1",
+            "id": 50
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "2003"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows 2003",
+            "id": 51
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "XP SP2"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows XP SP2",
+            "id": 52
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "7"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows 7",
+            "id": 53
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "7 SP1"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows 7 SP1",
+            "id": 54
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "8"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows 8",
+            "id": 55
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "10"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows 10",
+            "id": 56
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "2008"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows 2008",
+            "id": 57
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "2008 R2"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows 2008 R2",
+            "id": 58
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "2008 R2 SP1"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows 2008R2 SP1",
+            "id": 59
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "end_of_support_date": "",
+                "version": "2012"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Windows"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Windows 2012",
+            "id": 60
+        },
+        {
+            "properties": {
+                "release_date": "2017/3/17",
+                "end_of_support_date": "",
+                "version": "MS17-010"
+            },
+            "relationships": {
+                "prerequisite_sw": [
+                    "name:Windows 7 SP1",
+                    "name:Windows 7"
+                ],
+                "versionOf": "name:Microsoft Update"
+            },
+            "type": "Software version",
+            "comment": "Microsoft Security Bulletin MS17-010 - Critical Security Update for Microsoft Windows SMB Server (4013389)",
+            "name": "Win7 Update MS17-010",
+            "id": 62
+        },
+        {
+            "properties": {
+                "release_date": "2017/3/17",
+                "end_of_support_date": "",
+                "version": "MS17-010"
+            },
+            "relationships": {
+                "prerequisite_sw": [
+                    "name:Windows 2008",
+                    "name:Windows 2008 R2"
+                ],
+                "versionOf": "name:Microsoft Update"
+            },
+            "type": "Software version",
+            "comment": "Microsoft Security Bulletin MS17-010 - Critical Security Update for Microsoft Windows SMB Server (4013389)",
+            "name": "Win 2008 Update MS17-010",
+            "id": 63
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "version": "2.1"
+            },
+            "relationships": {
+                "versionOf": "name:pfSense"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "pfSense 2.1",
+            "id": 65
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "version": "2.2"
+            },
+            "relationships": {
+                "versionOf": "name:pfSense"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "pfSense 2.2",
+            "id": 66
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "version": "2.3"
+            },
+            "relationships": {
+                "versionOf": "name:pfSense"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "pfSense 2.3",
+            "id": 67
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "version": "2.4.2"
+            },
+            "relationships": {
+                "versionOf": "name:pfSense"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "pfSense 2.4.2",
+            "id": 68
+        },
+        {
+            "properties": {
+                "release_date": "2005/03/09",
+                "version": "4.6"
+            },
+            "relationships": {
+                "versionOf": "name:RedHat"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "CentOS 4.6",
+            "id": 70
+        },
+        {
+            "properties": {
+                "release_date": "2005/03/09",
+                "version": "4.7"
+            },
+            "relationships": {
+                "versionOf": "name:RedHat"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "CentOS 4.7",
+            "id": 71
+        },
+        {
+            "properties": {
+                "release_date": "2017/09/13",
+                "version": "7.4"
+            },
+            "relationships": {
+                "versionOf": "name:RedHat"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "CentOS 7.4",
+            "id": 72
+        },
+        {
+            "properties": {
+                "release_date": "2010/10/10",
+                "version": "10.10"
+            },
+            "relationships": {
+                "versionOf": "name:Ubuntu"
+            },
+            "type": "Software version",
+            "comment": "Maverick Meerkat",
+            "name": "Ubuntu 10.10",
+            "id": 74
+        },
+        {
+            "properties": {
+                "release_date": "2011/04/28",
+                "version": "11.04"
+            },
+            "relationships": {
+                "versionOf": "name:Ubuntu"
+            },
+            "type": "Software version",
+            "comment": "Natty Narwhal",
+            "name": "Ubuntu 11.04",
+            "id": 75
+        },
+        {
+            "properties": {
+                "release_date": "2013/04/23",
+                "version": "13.04"
+            },
+            "relationships": {
+                "versionOf": "name:Ubuntu"
+            },
+            "type": "Software version",
+            "comment": "Raring Ringtail",
+            "name": "Ubuntu 13.04",
+            "id": 76
+        },
+        {
+            "properties": {
+                "release_date": "2013/04/10",
+                "version": "1.4"
+            },
+            "relationships": {
+                "versionOf": "name:nginx"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "nginx 1.4",
+            "id": 78
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "version": "1.65"
+            },
+            "relationships": {
+                "versionOf": "name:CentOS DNS Server"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "CentOS DNS Server v1.65",
+            "id": 79
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "version": "0.9.8m"
+            },
+            "relationships": {
+                "versionOf": "name:OpenSSL"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "OpenSSL 0.9.8m",
+            "id": 81
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "version": "0.9.8m"
+            },
+            "relationships": {
+                "versionOf": "name:OpenSSL"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "OpenSSL 0.9.8q",
+            "id": 82
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "version": "0.9.8m"
+            },
+            "relationships": {
+                "versionOf": "name:OpenSSL"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "OpenSSL 0.9.8g",
+            "id": 83
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "version": "0.9.8m"
+            },
+            "relationships": {
+                "versionOf": "name:OpenSSL"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "OpenSSL 0.9.8a",
+            "id": 84
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "version": "1.0.0a"
+            },
+            "relationships": {
+                "versionOf": "name:OpenSSL"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "OpenSSL 1.0.0a",
+            "id": 85
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "version": "1.0.0a"
+            },
+            "relationships": {
+                "versionOf": "name:OpenSSL"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "OpenSSL 1.0.0b",
+            "id": 86
+        },
+        {
+            "properties": {
+                "release_date": "2017/10/3",
+                "version": "7.6"
+            },
+            "relationships": {
+                "versionOf": "name:OpenSSH"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "OpenSSH Client 7.6",
+            "id": 88
+        },
+        {
+            "properties": {
+                "release_date": "2017/10/3",
+                "version": "7.6"
+            },
+            "relationships": {
+                "versionOf": "name:OpenSSH"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "OpenSSH Server 7.6",
+            "id": 89
+        },
+        {
+            "properties": {
+                "release_date": "",
+                "version": "2003"
+            },
+            "relationships": {
+                "versionOf": "name:Microsoft Office"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "Microsoft Office 2003",
+            "id": 91
+        },
+        {
+            "properties": {
+                "release_date": "2017/04/17",
+                "version": "4.14.4"
+            },
+            "relationships": {
+                "versionOf": "name:Metasploit Framework"
+            },
+            "type": "Software version",
+            "comment": "",
+            "name": "MSFFramework4.14.4",
+            "id": 93
+        },
+        {
+            "properties": {
+                "defaultPorts": [
+                    139,
+                    445
+                ],
+                "version": "1"
+            },
+            "relationships": {},
+            "type": "Protocol",
+            "comment": "",
+            "name": "SMBProtocolV1",
+            "id": 95
+        },
+        {
+            "properties": {
+                "defaultPorts": [
+                    139,
+                    445
+                ],
+                "version": "2"
+            },
+            "relationships": {},
+            "type": "Protocol",
+            "comment": "",
+            "name": "SMBProtocolV2",
+            "id": 96
+        },
+        {
+            "properties": {
+                "defaultPorts": [
+                    53
+                ],
+                "version": "2"
+            },
+            "relationships": {},
+            "type": "Protocol",
+            "comment": "",
+            "name": "DNSProtocol",
+            "id": 97
+        },
+        {
+            "properties": {
+                "defaultPorts": [
+                    80,
+                    8080
+                ],
+                "version": "1"
+            },
+            "relationships": {},
+            "type": "Protocol",
+            "comment": "",
+            "name": "HTTPProtocol",
+            "id": 98
+        },
+        {
+            "properties": {
+                "defaultPorts": [
+                    443
+                ],
+                "version": "1"
+            },
+            "relationships": {},
+            "type": "Protocol",
+            "comment": "",
+            "name": "HTTPSProtocol",
+            "id": 99
+        },
+        {
+            "properties": {
+                "defaultPorts": [
+                    22
+                ],
+                "version": "1"
+            },
+            "relationships": {},
+            "type": "Protocol",
+            "comment": "",
+            "name": "SSHProtocol",
+            "id": 100
+        },
+        {
+            "properties": {
+                "defaultPorts": [
+                    3389
+                ],
+                "version": "1"
+            },
+            "relationships": {},
+            "type": "Protocol",
+            "comment": "",
+            "name": "MS_RDP_Protocol",
+            "id": 101
+        },
+        {
+            "type": "Attack Type",
+            "comment": "",
+            "name": "Attack-Type-MITM",
+            "id": 1,
+            "properties": {}
+        },
+        {
+            "type": "Vector",
+            "comment": "",
+            "name": "LocalVector",
+            "id": 3,
+            "properties": {}
+        },
+        {
+            "type": "Vector",
+            "comment": "",
+            "name": "RemoteVector",
+            "id": 4,
+            "properties": {}
+        },
+        {
+            "type": "ImpactLevel",
+            "comment": "",
+            "name": "NoImpact",
+            "id": 6,
+            "properties": {}
+        },
+        {
+            "type": "ImpactLevel",
+            "comment": "",
+            "name": "PartialImpact",
+            "id": 7,
+            "properties": {}
+        },
+        {
+            "type": "ImpactLevel",
+            "comment": "",
+            "name": "CompleteImpact",
+            "id": 8,
+            "properties": {}
+        },
+        {
+            "type": "Access Level",
+            "comment": "",
+            "name": "NoAccess",
+            "id": 10,
+            "properties": {}
+        },
+        {
+            "type": "Access Level",
+            "comment": "",
+            "name": "UserLevelAccess",
+            "id": 11,
+            "properties": {}
+        },
+        {
+            "type": "Access Level",
+            "comment": "",
+            "name": "AdministratorLevelAccess",
+            "id": 12,
+            "properties": {}
+        },
+        {
+            "type": "Access Level",
+            "comment": "",
+            "name": "SystemLevelAccess",
+            "id": 13,
+            "properties": {}
+        },
+        {
+            "type": "CWE",
+            "comment": "OS Command Injection",
+            "name": "CWE78",
+            "id": 15,
+            "properties": {
+                "cwe_id": "78"
+            }
+        },
+        {
+            "type": "CWE",
+            "comment": "Improper input validation",
+            "name": "CWE20",
+            "id": 16,
+            "properties": {
+                "cwe_id": "78"
+            }
+        },
+        {
+            "type": "CWE",
+            "comment": "Numeric errors",
+            "name": "CWE189",
+            "id": 17,
+            "properties": {
+                "cwe_id": "189"
+            }
+        },
+        {
+            "type": "CWE",
+            "comment": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+            "name": "CWE119",
+            "id": 18,
+            "properties": {
+                "cwe_id": "119"
+            }
+        },
+        {
+            "properties": {
+                "vuln_id": [
+                    "CVE-2016-10709",
+                    "EXPLOIT-DB 39709"
+                ],
+                "authentication": "None",
+                "references": [
+                    "https://www.security-assessment.com/files/documents/advisory/pfsenseAdvisory.pdf",
+                    "https://www.rapid7.com/db/modules/exploit/unix/http/pfsense_graph_injection_exec",
+                    "https://www.pfsense.org/security/advisories/pfSense-SA-16_01.webgui.asc "
+                ],
+                "attackTypes": [],
+                "score": 4.3,
+                "date": "2018-01-21",
+                "complexity": "Medium",
+                "description": "pfSense before 2.3 allows remote authenticated users to execute arbitrary OS commands via a '|' character in the status_rrd_graph_img.php graph parameter, related to _rrd_graph_img.php."
+            },
+            "relationships": {
+                "availability": "name:NoImpact",
+                "CWEs": [
+                    "name:CWE78"
+                ],
+                "vector": [
+                    "name:LocalVector"
+                ],
+                "prerequisites": [
+                    "name:UserLevelAccess"
+                ],
+                "confidentiality": "name:PartialImpact",
+                "outcomes": [
+                    "name:SystemLevelAccess"
+                ],
+                "integrity": "name:NoImpact"
+            },
+            "type": "Reported Vulnerability",
+            "comment": "",
+            "name": "CVE-2016-10709",
+            "id": 20
+        },
+        {
+            "properties": {
+                "access": "None",
+                "vuln_id": [
+                    "CVE-2017-0143",
+                    "MS17-010",
+                    "EXPLOIT-DB 43970",
+                    "SECTRACK 1037991",
+                    "EXPLOIT-DB 41891"
+                ],
+                "authentication": "None",
+                "references": [
+                    "https://www.exploit-db.com/exploits/43970/",
+                    "http://www.securitytracker.com/id/1037991",
+                    "https://www.exploit-db.com/exploits/41987/",
+                    "https://www.exploit-db.com/exploits/41891/",
+                    "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2017-0143 CONFIRM",
+                    "http://www.securityfocus.com/bid/96703"
+                ],
+                "attackTypes": [],
+                "score": 9.3,
+                "date": "2017-03-16",
+                "complexity": "Medium",
+                "description": "The SMBv1 server in Microsoft Windows Vista SP2; Windows Server 2008 SP2 and R2 SP1; Windows 7 SP1; Windows 8.1; Windows Server 2012 Gold and R2; Windows RT 8.1; and Windows 10 Gold, 1511, and 1607; and Windows Server 2016 allows remote attackers to execute arbitrary code via crafted packets, aka Windows SMB Remote Code Execution Vulnerability. This vulnerability is different from those described in CVE-2017-0144, CVE-2017-0145, CVE-2017-0146, and CVE-2017-0148."
+            },
+            "relationships": {
+                "availability": "name:CompleteImpact",
+                "CWEs": [
+                    "name:CWE20"
+                ],
+                "vector": [
+                    "name:LocalVector",
+                    "name:RemoteVector"
+                ],
+                "prerequisites": [
+                    "name:UserLevelAccess"
+                ],
+                "confidentiality": "name:CompleteImpact",
+                "outcomes": [
+                    "name:SystemLevelAccess"
+                ],
+                "integrity": "name:CompleteImpact"
+            },
+            "type": "Reported Vulnerability",
+            "comment": "",
+            "name": "CVE-2017-0143",
+            "id": 21
+        },
+        {
+            "properties": {
+                "access": "None",
+                "vuln_id": [
+                    "BID 59699",
+                    "GLSA-201310-04",
+                    "FEDORA-2013-7560"
+                ],
+                "authentication": "None",
+                "references": [
+                    "http://www.securityfocus.com/bid/59699",
+                    "http://www.vnsecurity.net/2013/05/analysis-of-nginx-cve-2013-2028/",
+                    "http://packetstormsecurity.com/files/121675/Nginx-1.3.9-1.4.0-Denial-Of-Service.html",
+                    "http://security.gentoo.org/glsa/glsa-201310-04.xml",
+                    "https://github.com/rapid7/metasploit-framework/pull/1834",
+                    "http://mailman.nginx.org/pipermail/nginx-announce/2013/000112.html",
+                    "http://nginx.org/download/patch.2013.chunked.txt ",
+                    "http://lists.fedoraproject.org/pipermail/package-announce/2013-May/105176.html"
+                ],
+                "attackTypes": [],
+                "score": 7.5,
+                "date": "2013-07-19",
+                "complexity": "Low",
+                "description": "The ngx_http_parse_chunked function in http ngx_http_parse.c in nginx 1.3.9 through 1.4.0 allows remote attackers to cause a denial of service crash and execute arbitrary code via a chunked Transfer-Encoding request with a large chunk size, which triggers an integer signedness error and a stack-based buffer overflow."
+            },
+            "relationships": {
+                "availability": "name:PartialImpact",
+                "CWEs": [
+                    "name:CWE189"
+                ],
+                "vector": [
+                    "name:LocalVector",
+                    "name:RemoteVector"
+                ],
+                "prerequisites": [],
+                "confidentiality": "name:PartialImpact",
+                "outcomes": [
+                    "name:SystemLevelAccess"
+                ],
+                "integrity": "name:PartialImpact"
+            },
+            "type": "Reported Vulnerability",
+            "comment": "",
+            "name": "CVE-2013-2028",
+            "id": 22
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "notSWReqs": [],
+                "cve": "name:CVE-2013-2028",
+                "andSWReqs": [
+                    "name:Ubuntu 13.04",
+                    "name:nginx 1.4"
+                ]
+            },
+            "type": "CVE SW Prerequisites",
+            "comment": "",
+            "name": "CVE-2013-2028_SW_Link1",
+            "id": 23
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "notSWReqs": [],
+                "cve": "name:CVE-2013-2028",
+                "andSWReqs": [
+                    "name:CentOS 7.4",
+                    "name:nginx 1.4"
+                ]
+            },
+            "type": "CVE SW Prerequisites",
+            "comment": "",
+            "name": "CVE-2013-2028_SW_Link2",
+            "id": 24
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "notSWReqs": [],
+                "cve": "name:CVE-2013-2028",
+                "andSWReqs": [
+                    "name:CentOS 4.7",
+                    "name:nginx 1.4"
+                ]
+            },
+            "type": "CVE SW Prerequisites",
+            "comment": "",
+            "name": "CVE-2013-2028_SW_Link3",
+            "id": 25
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "notSWReqs": [
+                    "name:Win7 Update MS17-010"
+                ],
+                "cve": "name:CVE-2017-0143",
+                "andSWReqs": [
+                    "name:Windows 7 SP1"
+                ]
+            },
+            "type": "CVE SW Prerequisites",
+            "comment": "",
+            "name": "CVE-2017-0143_SW_Link1",
+            "id": 27
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "notSWReqs": [
+                    "name:Win7 Update MS17-010"
+                ],
+                "cve": "name:CVE-2017-0143",
+                "andSWReqs": [
+                    "name:Windows 7"
+                ]
+            },
+            "type": "CVE SW Prerequisites",
+            "comment": "",
+            "name": "CVE-2017-0143_SW_Link2",
+            "id": 28
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "notSWReqs": [
+                    "name:Win 2008 Update MS17-010"
+                ],
+                "cve": "name:CVE-2017-0143",
+                "andSWReqs": [
+                    "name:Windows 2008"
+                ]
+            },
+            "type": "CVE SW Prerequisites",
+            "comment": "",
+            "name": "CVE-2017-0143_SW_Link3",
+            "id": 29
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "notSWReqs": [
+                    "name:Win 2008 Update MS17-010"
+                ],
+                "cve": "name:CVE-2017-0143",
+                "andSWReqs": [
+                    "name:Windows 2008 R2"
+                ]
+            },
+            "type": "CVE SW Prerequisites",
+            "comment": "",
+            "name": "CVE-2017-0143_SW_Link4",
+            "id": 30
+        },
+        {
+            "properties": {
+                "access": "None",
+                "vuln_id": [
+                    "CVE-2009-2692",
+                    "OSVDB-56992"
+                ],
+                "authentication": "None",
+                "references": [
+                    "http://www.securityfocus.com/archive/1/archive/1/505751/100/0/threaded",
+                    "http://www.securityfocus.com/archive/1/archive/1/505912/100/0/threaded",
+                    "http://www.exploit-db.com/exploits/19933",
+                    "http://www.exploit-db.com/exploits/9477",
+                    "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=e694958388c50148389b0e9b9e9e8945cf0f1b98",
+                    "http://www.kernel.org/pub/linux/kernel/v2.4/ChangeLog-2.4.37.5",
+                    "https://bugzilla.redhat.com/show_bug.cgi?id=516949",
+                    "http://rhn.redhat.com/errata/RHSA-2009-1222.html",
+                    "http://www.vupen.com/english/advisories/2009/3316"
+                ],
+                "attackTypes": [],
+                "score": 7.2,
+                "date": "2009-08-05",
+                "complexity": "Low",
+                "description": "The Linux kernel 2.6.0 through 2.6.30.4, and 2.4.4 through 2.4.37.4, does not initialize all function pointers for socket operations in proto_ops structures, which allows local users to trigger a NULL pointer dereference and gain privileges by using mmap to map page zero, placing arbitrary code on this page, and then invoking an unavailable operation, as demonstrated by the sendpage operation (sock_sendpage function) on a PF_PPPOX socket."
+            },
+            "relationships": {
+                "availability": "name:CompleteImpact",
+                "CWEs": [
+                    "name:CWE119"
+                ],
+                "vector": [
+                    "name:LocalVector"
+                ],
+                "prerequisites": [],
+                "confidentiality": "name:CompleteImpact",
+                "outcomes": [
+                    "name:SystemLevelAccess"
+                ],
+                "integrity": "name:CompleteImpact"
+            },
+            "type": "Reported Vulnerability",
+            "comment": "",
+            "name": "CVE-2009-2692",
+            "id": 31
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "notSWReqs": [],
+                "cve": "name:CVE-2009-2692",
+                "andSWReqs": [
+                    "name:Ubuntu 13.04"
+                ]
+            },
+            "type": "CVE SW Prerequisites",
+            "comment": "",
+            "name": "CVE-2009-2692_SW_Link1",
+            "id": 32
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "notSWReqs": [],
+                "cve": "name:CVE-2009-2692",
+                "andSWReqs": [
+                    "name:CentOS 4.6"
+                ]
+            },
+            "type": "CVE SW Prerequisites",
+            "comment": "",
+            "name": "CVE-2009-2692_SW_Link2",
+            "id": 33
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "notSWReqs": [],
+                "cve": "name:CVE-2009-2692",
+                "andSWReqs": [
+                    "name:CentOS 4.7"
+                ]
+            },
+            "type": "CVE SW Prerequisites",
+            "comment": "",
+            "name": "CVE-2009-2692_SW_Link3",
+            "id": 34
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "notSWReqs": [],
+                "cve": "name:CVE-2009-2692",
+                "andSWReqs": [
+                    "name:CentOS 7.4"
+                ]
+            },
+            "type": "CVE SW Prerequisites",
+            "comment": "",
+            "name": "CVE-2009-2692_SW_Link4",
+            "id": 35
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "notSWReqs": [],
+                "cve": "name:CVE-2009-2692",
+                "andSWReqs": [
+                    "name:Ubuntu 10.10"
+                ]
+            },
+            "type": "CVE SW Prerequisites",
+            "comment": "",
+            "name": "CVE-2009-2692_SW_Link5",
+            "id": 36
+        },
+        {
+            "properties": {
+                "reliability": "high"
+            },
+            "relationships": {
+                "requiresCPUArchitecture": [],
+                "softwareModuleOf": [
+                    "name:MSFFramework4.14.4"
+                ],
+                "exploitsVulnerability": [
+                    "name:CVE-2017-0143"
+                ],
+                "requiresService": [
+                    "name:SMBProtocolV1"
+                ]
+            },
+            "type": "Exploit",
+            "comment": "Eternal blue",
+            "name": "MSF_EternalBlueSMBRemoteWindowsKernelPoolCorruption",
+            "id": 38
+        },
+        {
+            "properties": {
+                "reliability": "high"
+            },
+            "relationships": {
+                "requiresCPUArchitecture": [],
+                "softwareModuleOf": [
+                    "name:MSFFramework4.14.4"
+                ],
+                "exploitsVulnerability": [
+                    "name:CVE-2009-2692"
+                ],
+                "requiresService": []
+            },
+            "type": "Exploit",
+            "comment": "Priv escalation",
+            "name": "MSF_LinuxKernelSendpage",
+            "id": 39
+        },
+        {
+            "properties": {
+                "url_link": "https://www.exploit-db.com/exploits/9477/",
+                "reliability": "high"
+            },
+            "relationships": {
+                "exploitsVulnerability": [
+                    "name:CVE-2009-2692"
+                ]
+            },
+            "type": "Exploit",
+            "comment": "Priv escalation",
+            "name": "1_Public_LinuxKernelSendpage",
+            "id": 40
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "requiresCPUArchitecture": [],
+                "softwareModuleOf": [
+                    "name:MSFFramework4.14.4"
+                ],
+                "exploitsVulnerability": [
+                    "name:CVE-2013-2028"
+                ],
+                "requiresService": [
+                    "name:SMBProtocolV1"
+                ]
+            },
+            "type": "Exploit",
+            "comment": "nginx - only unix",
+            "name": "MSF_NginxChunkedEncodingStackBufferOverflow",
+            "id": 41
+        },
+        {
+            "type": "Network",
+            "properties": {},
+            "name": "The Internet",
+            "id": 2
+        },
+        {
+            "type": "Network",
+            "properties": {},
+            "name": "DMZ Network",
+            "id": 5
+        },
+        {
+            "type": "Network",
+            "properties": {},
+            "name": "Internal Network",
+            "id": 8
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "ipAddress": "192.168.22.254",
+                "_acomment": "This assumes port forwarding",
+                "ServiceRules": [
+                    "name:Web_Server_Web_SW_Service;*",
+                    "name:SW_Mail_SSH_service;*",
+                    "name:SW_Mail_mail_service;*"
+                ],
+                "NICRules": [
+                    "name:Web_Server_NIC;*",
+                    "name:SW_Mail_NIC;*"
+                ],
+                "macAddress": "00:50:56:9C:9D:06",
+                "__bcomment": "This assumes normal firewall routing"
+            },
+            "relationships": {
+                "onNetwork": "name:The Internet"
+            },
+            "name": "ExternalFW Internet NIC",
+            "id": 11
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "NICRules": [
+                    "name:The Internet;*"
+                ],
+                "macAddress": "00:50:56:76:9A:61",
+                "ipAddress": "192.168.22.254",
+                "ServiceRules": [
+                    "name:Web_Server_Web_SW_Service;*",
+                    "name:SW_Mail_SSH_service;*",
+                    "name:SW_Mail_mail_service;*"
+                ],
+                "_acomment": "This assumes normal firewall routing"
+            },
+            "relationships": {
+                "onNetwork": "name:DMZ Network"
+            },
+            "name": "ExternalFW Internal Server NIC",
+            "id": 12
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:pfSense 2.1"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "PFSense1 running on External FW",
+            "name": "SW_PFSenseExternalFW",
+            "id": 13
+        },
+        {
+            "properties": {
+                "port": 23
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:SSHProtocol"
+                ],
+                "runBySoftware": [
+                    "name:SW_PFSenseExternalFW"
+                ],
+                "onNIC": [
+                    "name:ExternalFW Internal Server NIC"
+                ]
+            },
+            "type": "Service",
+            "comment": "ssh service of firewall",
+            "name": "SW_Service_SSH_PFSenseExternalFW",
+            "id": 14
+        },
+        {
+            "properties": {
+                "port": 80
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:HTTPProtocol"
+                ],
+                "runBySoftware": [
+                    "name:SW_PFSenseExternalFW"
+                ],
+                "onNIC": [
+                    "name:ExternalFW Internal Server NIC"
+                ]
+            },
+            "type": "Service",
+            "comment": "web service of firewall",
+            "name": "SW_Service_HTTP_PFSenseExternalFW",
+            "id": 15
+        },
+        {
+            "hostname": "ExternalFW",
+            "relationships": {
+                "hasNIC": [
+                    "name:ExternalFW Internet NIC",
+                    "name:ExternalFW Internal Server NIC"
+                ],
+                "runsSoftware": [
+                    "name:SW_PFSenseExternalFW"
+                ]
+            },
+            "properties": {},
+            "type": "Server",
+            "comment": "PFSense1",
+            "name": "ExternalFW",
+            "id": 16
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "_bcomment": "This assumes normal firewall routing",
+                "macAddress": "00:50:56:C0:A0:3F",
+                "ipAddress": "192.168.23.103",
+                "ServiceRules": [
+                    "name:SW_Mail_SSH_service;*",
+                    "name:SW_Mail_mail_service;*"
+                ],
+                "_acomment": "This assumes port forwarding"
+            },
+            "relationships": {
+                "onNetwork": "name:DMZ Network"
+            },
+            "name": "Mail Server NIC",
+            "id": 19
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:Windows 2003"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "OS of mail server",
+            "name": "SW_Mail_server_OS",
+            "id": 20
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:a"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "mail sw of mail server",
+            "name": "SW_Mail_mail",
+            "id": 21
+        },
+        {
+            "properties": {
+                "port": 80
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:HTTPProtocol"
+                ],
+                "runBySoftware": [
+                    "name:SW_Mail_mail"
+                ],
+                "onNIC": [
+                    "name:Mail Server NIC"
+                ]
+            },
+            "type": "Service",
+            "comment": "web service of web server",
+            "name": "SW_Mail_mail_service",
+            "id": 22
+        },
+        {
+            "properties": {
+                "port": 22
+            },
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:OpenSSH Server 7.6"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "ssh sw of mail server",
+            "name": "SW_Mail_SSH",
+            "id": 23
+        },
+        {
+            "properties": {
+                "port": 22
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:SSHProtocol"
+                ],
+                "runBySoftware": [
+                    "name:SW_Mail_SSH"
+                ],
+                "onNIC": [
+                    "name:Mail Server NIC"
+                ]
+            },
+            "type": "Service",
+            "comment": "ssh service of web server",
+            "name": "SW_Mail_SSH_service",
+            "id": 24
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasNIC": [
+                    "name:Mail Server NIC"
+                ],
+                "runsSoftware": [
+                    "name:SW_Mail_mail",
+                    "name:SW_Mail_server_OS",
+                    "name:SW_Mail_SSH"
+                ]
+            },
+            "type": "Server",
+            "comment": "",
+            "name": "Mail Server",
+            "id": 25
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "macAddress": "00:50:56:45:86:F8",
+                "ipAddress": "192.168.23.104"
+            },
+            "relationships": {
+                "onNetwork": "name:DMZ Network"
+            },
+            "name": "DNS Server NIC",
+            "id": 28
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:Windows 2012"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "os sw of dns server",
+            "name": "DNS_Server_OS_SW",
+            "id": 29
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:CentOS DNS Server v1.65"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "dns sw of dns server",
+            "name": "DNS_Server_DNS_SW",
+            "id": 30
+        },
+        {
+            "properties": {
+                "port": 53
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:DNSProtocol"
+                ],
+                "runBySoftware": [
+                    "name:DNS_Server_DNS_SW"
+                ],
+                "onNIC": [
+                    "name:DNS Server NIC"
+                ]
+            },
+            "type": "Service",
+            "comment": "dns service of dns server",
+            "name": "DNS_Server_DNS_SW_Service",
+            "id": 31
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasNIC": [
+                    "name:DNS Server NIC"
+                ],
+                "runsSoftware": [
+                    "name:DNS_Server_OS_SW",
+                    "name:DNS_Server_DNS_SW"
+                ]
+            },
+            "type": "Server",
+            "comment": "",
+            "name": "DNS Server",
+            "id": 32
+        },
+        {
+            "properties": {
+                "port": 80
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:HTTPProtocol"
+                ],
+                "runBySoftware": [
+                    "name:DNS_Server_DNS_SW"
+                ],
+                "onNIC": [
+                    "name:DNS Server NIC"
+                ]
+            },
+            "type": "Service",
+            "comment": "dns service of dns server",
+            "name": "DNS_Server_DNS_SW_Service",
+            "id": 33
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "macAddress": "00:50:56:BC:21:DA",
+                "ipAddress": "192.168.23.101"
+            },
+            "relationships": {
+                "onNetwork": "name:DMZ Network"
+            },
+            "name": "Web_Server_NIC",
+            "id": 36
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:CentOS 4.7"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "os sw of web server",
+            "name": "Web_Server_OS_SW",
+            "id": 37
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:nginx 1.4"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "web sw of web server",
+            "name": "Web_Server_Web_SW",
+            "id": 38
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasNIC": [
+                    "name:Web_Server_NIC"
+                ],
+                "runsSoftware": [
+                    "name:Web_Server_Web_SW",
+                    "name:Web_Server_OS_SW"
+                ]
+            },
+            "type": "Server",
+            "comment": "",
+            "name": "Web Server",
+            "id": 39
+        },
+        {
+            "properties": {
+                "port": 80
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:HTTPProtocol"
+                ],
+                "runBySoftware": [
+                    "name:Web_Server_Web_SW"
+                ],
+                "onNIC": [
+                    "name:Web_Server_NIC"
+                ]
+            },
+            "type": "Service",
+            "comment": "web service of web server",
+            "name": "Web_Server_Web_SW_Service",
+            "id": 40
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "NICRules": [
+                    "name:Web_Server_NIC;*",
+                    "name:SW_Mail_NIC;*"
+                ],
+                "macAddress": "00:1C:14:2D:CD:CB",
+                "ipAddress": "192.168.23.253",
+                "_acomment": "This assumes normal firewall routing",
+                "ServiceRules": [
+                    "name:Web_Server_Web_SW_Service;*",
+                    "name:SW_Mail_SSH_service;*",
+                    "name:SW_Mail_mail_service;*"
+                ]
+            },
+            "relationships": {
+                "onNetwork": "name:DMZ Network"
+            },
+            "name": "DMZ_Internal_FW DMZ NIC",
+            "id": 43
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "macAddress": "00:1C:14:4C:1B:E5",
+                "ipAddress": "192.168.24.253"
+            },
+            "relationships": {
+                "onNetwork": "name:Internal Network"
+            },
+            "name": "DMZ_Internal_FW Internal 1 NIC",
+            "id": 44
+        },
+        {
+            "hostname": "DMZ_Internal_FW",
+            "relationships": {
+                "hasNIC": [
+                    "name:DMZ_Internal_FW DMZ NIC",
+                    "name:DMZ_Internal_FW Internal 1 NIC"
+                ],
+                "runsSoftware": [
+                    "name:pfSense 2.1"
+                ]
+            },
+            "properties": {},
+            "type": "Server",
+            "comment": "",
+            "name": "DMZ_Internal_FW",
+            "id": 45
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "macAddress": "00:1C:14:4B:6E:02",
+                "ipAddress": ""
+            },
+            "relationships": {
+                "onNetwork": "name:Internal Network"
+            },
+            "name": "Internal 1 file share NIC",
+            "id": 49
+        },
+        {
+            "properties": {
+                "macAddress": "",
+                "ipAddress": ""
+            },
+            "relationships": {
+                "hasNIC": [
+                    "name:Internal 1 file share NIC"
+                ],
+                "runsSoftware": [
+                    "name:Windows 2008"
+                ]
+            },
+            "type": "Server",
+            "comment": "",
+            "name": "Internal 1 File Share Server",
+            "id": 51
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "macAddress": "00:1C:14:A5:E6:53",
+                "ipAddress": "192.168.26.111"
+            },
+            "relationships": {
+                "onNetwork": "name:Internal Network"
+            },
+            "name": "Workstation_NIC_1",
+            "id": 59
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:Windows 7 SP1"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "Operating System for workstation",
+            "name": "WorkstationOS_1",
+            "id": 60
+        },
+        {
+            "properties": {
+                "port": 3389
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:MS_RDP_Protocol"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_1"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_1"
+                ]
+            },
+            "type": "Service",
+            "comment": "rdp for workstation",
+            "name": "WorkstationOS_1_RDP_OS",
+            "id": 61
+        },
+        {
+            "properties": {
+                "port": 445
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:SMBProtocolV1"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_1"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_1"
+                ]
+            },
+            "type": "Service",
+            "comment": "smb for workstation",
+            "name": "WorkstationOS_1_SMB_OS",
+            "id": 62
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasNIC": [
+                    "name:Workstation_NIC_1"
+                ],
+                "runsSoftware": [
+                    "name:WorkstationOS_1"
+                ]
+            },
+            "type": "Server",
+            "comment": "",
+            "name": "Workstation_1",
+            "id": 63
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "macAddress": "00:1C:14:A5:E6:54",
+                "ipAddress": "192.168.26.111"
+            },
+            "relationships": {
+                "onNetwork": "name:Internal Network"
+            },
+            "name": "Workstation_NIC_2",
+            "id": 65
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:Windows 7 SP1"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "Operating System for workstation",
+            "name": "WorkstationOS_2",
+            "id": 66
+        },
+        {
+            "properties": {
+                "port": 3389
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:MS_RDP_Protocol"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_2"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_2"
+                ]
+            },
+            "type": "Service",
+            "comment": "rdp for workstation",
+            "name": "WorkstationOS_2_RDP_OS",
+            "id": 67
+        },
+        {
+            "properties": {
+                "port": 445
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:SMBProtocolV1"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_2"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_2"
+                ]
+            },
+            "type": "Service",
+            "comment": "smb for workstation",
+            "name": "WorkstationOS_2_SMB_OS",
+            "id": 68
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasNIC": [
+                    "name:Workstation_NIC_2"
+                ],
+                "runsSoftware": [
+                    "name:WorkstationOS_2"
+                ]
+            },
+            "type": "Server",
+            "comment": "",
+            "name": "Workstation_2",
+            "id": 69
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "macAddress": "00:1C:14:BB:E1:48",
+                "ipAddress": "192.168.26.112"
+            },
+            "relationships": {
+                "onNetwork": "name:Internal Network"
+            },
+            "name": "Workstation_NIC_3",
+            "id": 71
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:Windows 7 SP1"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "Operating System for workstation",
+            "name": "WorkstationOS_3",
+            "id": 72
+        },
+        {
+            "properties": {
+                "port": 3389
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:MS_RDP_Protocol"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_3"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_3"
+                ]
+            },
+            "type": "Service",
+            "comment": "rdp for workstation",
+            "name": "WorkstationOS_3_RDP_OS",
+            "id": 73
+        },
+        {
+            "properties": {
+                "port": 445
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:SMBProtocolV1"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_3"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_3"
+                ]
+            },
+            "type": "Service",
+            "comment": "smb for workstation",
+            "name": "WorkstationOS_3_SMB_OS",
+            "id": 74
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasNIC": [
+                    "name:Workstation_NIC_3"
+                ],
+                "runsSoftware": [
+                    "name:WorkstationOS_3"
+                ]
+            },
+            "type": "Server",
+            "comment": "",
+            "name": "Workstation_3",
+            "id": 75
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "macAddress": "00:1C:14:D2:11:AA",
+                "ipAddress": "192.168.26.113"
+            },
+            "relationships": {
+                "onNetwork": "name:Internal Network"
+            },
+            "name": "Workstation_NIC_4",
+            "id": 77
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:Windows 7 SP1"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "Operating System for workstation",
+            "name": "WorkstationOS_4",
+            "id": 78
+        },
+        {
+            "properties": {
+                "port": 3389
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:MS_RDP_Protocol"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_4"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_4"
+                ]
+            },
+            "type": "Service",
+            "comment": "rdp for workstation",
+            "name": "WorkstationOS_4_RDP_OS",
+            "id": 79
+        },
+        {
+            "properties": {
+                "port": 445
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:SMBProtocolV1"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_4"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_4"
+                ]
+            },
+            "type": "Service",
+            "comment": "smb for workstation",
+            "name": "WorkstationOS_4_SMB_OS",
+            "id": 80
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasNIC": [
+                    "name:Workstation_NIC_4"
+                ],
+                "runsSoftware": [
+                    "name:WorkstationOS_4"
+                ]
+            },
+            "type": "Server",
+            "comment": "",
+            "name": "Workstation_4",
+            "id": 81
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "macAddress": "00:1C:44:EA:DD:44",
+                "ipAddress": "192.168.26.114"
+            },
+            "relationships": {
+                "onNetwork": "name:Internal Network"
+            },
+            "name": "Workstation_NIC_5",
+            "id": 83
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:Windows 7 SP1"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "Operating System for workstation",
+            "name": "WorkstationOS_5",
+            "id": 84
+        },
+        {
+            "properties": {
+                "port": 3389
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:MS_RDP_Protocol"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_5"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_5"
+                ]
+            },
+            "type": "Service",
+            "comment": "rdp for workstation",
+            "name": "WorkstationOS_5_RDP_OS",
+            "id": 85
+        },
+        {
+            "properties": {
+                "port": 445
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:SMBProtocolV1"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_5"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_5"
+                ]
+            },
+            "type": "Service",
+            "comment": "smb for workstation",
+            "name": "WorkstationOS_5_SMB_OS",
+            "id": 86
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasNIC": [
+                    "name:Workstation_NIC_5"
+                ],
+                "runsSoftware": [
+                    "name:WorkstationOS_5"
+                ]
+            },
+            "type": "Server",
+            "comment": "",
+            "name": "Workstation_5",
+            "id": 87
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "macAddress": "00:1C:14:DD:EE:13",
+                "ipAddress": "192.168.26.115"
+            },
+            "relationships": {
+                "onNetwork": "name:Internal Network"
+            },
+            "name": "Workstation_NIC_6",
+            "id": 89
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:Windows 7 SP1"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "Operating System for workstation",
+            "name": "WorkstationOS_6",
+            "id": 90
+        },
+        {
+            "properties": {
+                "port": 3389
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:MS_RDP_Protocol"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_6"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_6"
+                ]
+            },
+            "type": "Service",
+            "comment": "rdp for workstation",
+            "name": "WorkstationOS_6_RDP_OS",
+            "id": 91
+        },
+        {
+            "properties": {
+                "port": 445
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:SMBProtocolV1"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_6"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_6"
+                ]
+            },
+            "type": "Service",
+            "comment": "smb for workstation",
+            "name": "WorkstationOS_6_SMB_OS",
+            "id": 92
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasNIC": [
+                    "name:Workstation_NIC_6"
+                ],
+                "runsSoftware": [
+                    "name:WorkstationOS_6"
+                ]
+            },
+            "type": "Server",
+            "comment": "",
+            "name": "Workstation_6",
+            "id": 93
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "macAddress": "00:1C:14:34:12:16",
+                "ipAddress": "192.168.26.116"
+            },
+            "relationships": {
+                "onNetwork": "name:Internal Network"
+            },
+            "name": "Workstation_NIC_7",
+            "id": 95
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:Windows 7 SP1"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "Operating System for workstation",
+            "name": "WorkstationOS_7",
+            "id": 96
+        },
+        {
+            "properties": {
+                "port": 3389
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:MS_RDP_Protocol"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_7"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_7"
+                ]
+            },
+            "type": "Service",
+            "comment": "rdp for workstation",
+            "name": "WorkstationOS_7_RDP_OS",
+            "id": 97
+        },
+        {
+            "properties": {
+                "port": 445
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:SMBProtocolV1"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_7"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_7"
+                ]
+            },
+            "type": "Service",
+            "comment": "smb for workstation",
+            "name": "WorkstationOS_7_SMB_OS",
+            "id": 98
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasNIC": [
+                    "name:Workstation_NIC_7"
+                ],
+                "runsSoftware": [
+                    "name:WorkstationOS_7"
+                ]
+            },
+            "type": "Server",
+            "comment": "",
+            "name": "Workstation_7",
+            "id": 99
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "macAddress": "00:1C:11:87:22:18",
+                "ipAddress": "192.168.26.117"
+            },
+            "relationships": {
+                "onNetwork": "name:Internal Network"
+            },
+            "name": "Workstation_NIC_8",
+            "id": 101
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:Windows 7 SP1"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "Operating System for workstation",
+            "name": "WorkstationOS_8",
+            "id": 102
+        },
+        {
+            "properties": {
+                "port": 3389
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:MS_RDP_Protocol"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_8"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_8"
+                ]
+            },
+            "type": "Service",
+            "comment": "rdp for workstation",
+            "name": "WorkstationOS_8_RDP_OS",
+            "id": 103
+        },
+        {
+            "properties": {
+                "port": 445
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:SMBProtocolV1"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_8"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_8"
+                ]
+            },
+            "type": "Service",
+            "comment": "smb for workstation",
+            "name": "WorkstationOS_8_SMB_OS",
+            "id": 104
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasNIC": [
+                    "name:Workstation_NIC_8"
+                ],
+                "runsSoftware": [
+                    "name:WorkstationOS_8"
+                ]
+            },
+            "type": "Server",
+            "comment": "",
+            "name": "Workstation_8",
+            "id": 105
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "macAddress": "00:1C:17:98:17:19",
+                "ipAddress": "192.168.26.118"
+            },
+            "relationships": {
+                "onNetwork": "name:Internal Network"
+            },
+            "name": "Workstation_NIC_9",
+            "id": 107
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:Windows 7 SP1"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "Operating System for workstation",
+            "name": "WorkstationOS_9",
+            "id": 108
+        },
+        {
+            "properties": {
+                "port": 3389
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:MS_RDP_Protocol"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_9"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_9"
+                ]
+            },
+            "type": "Service",
+            "comment": "rdp for workstation",
+            "name": "WorkstationOS_9_RDP_OS",
+            "id": 109
+        },
+        {
+            "properties": {
+                "port": 445
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:SMBProtocolV1"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_9"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_9"
+                ]
+            },
+            "type": "Service",
+            "comment": "smb for workstation",
+            "name": "WorkstationOS_9_SMB_OS",
+            "id": 110
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasNIC": [
+                    "name:Workstation_NIC_9"
+                ],
+                "runsSoftware": [
+                    "name:WorkstationOS_9"
+                ]
+            },
+            "type": "Server",
+            "comment": "",
+            "name": "Workstation_9",
+            "id": 111
+        },
+        {
+            "type": "NIC",
+            "properties": {
+                "macAddress": "00:1C:17:77:EE:10",
+                "ipAddress": "192.168.26.119"
+            },
+            "relationships": {
+                "onNetwork": "name:Internal Network"
+            },
+            "name": "Workstation_NIC_10",
+            "id": 113
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "ofSoftwareType": [
+                    "name:Windows 7 SP1"
+                ]
+            },
+            "type": "RunningSoftware",
+            "comment": "Operating System for workstation",
+            "name": "WorkstationOS_10",
+            "id": 114
+        },
+        {
+            "properties": {
+                "port": 3389
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:MS_RDP_Protocol"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_10"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_10"
+                ]
+            },
+            "type": "Service",
+            "comment": "rdp for workstation",
+            "name": "WorkstationOS_10_RDP_OS",
+            "id": 115
+        },
+        {
+            "properties": {
+                "port": 445
+            },
+            "relationships": {
+                "runsProtocol": [
+                    "name:SMBProtocolV1"
+                ],
+                "runBySoftware": [
+                    "name:WorkstationOS_10"
+                ],
+                "onNIC": [
+                    "name:Workstation_NIC_10"
+                ]
+            },
+            "type": "Service",
+            "comment": "smb for workstation",
+            "name": "WorkstationOS_10_SMB_OS",
+            "id": 116
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasNIC": [
+                    "name:Workstation_NIC_10"
+                ],
+                "runsSoftware": [
+                    "name:WorkstationOS_10"
+                ]
+            },
+            "type": "Server",
+            "comment": "",
+            "name": "Workstation_10",
+            "id": 117
+        },
+        {
+            "type": "PasswordComplexity",
+            "properties": {},
+            "relationships": {},
+            "name": "TrivialComplexity",
+            "id": 2
+        },
+        {
+            "type": "PasswordComplexity",
+            "properties": {},
+            "relationships": {},
+            "name": "MinimalComplexity",
+            "id": 3
+        },
+        {
+            "type": "PasswordComplexity",
+            "properties": {},
+            "relationships": {},
+            "name": "MediumComplexity",
+            "id": 4
+        },
+        {
+            "type": "PasswordComplexity",
+            "properties": {},
+            "relationships": {},
+            "name": "DifficultComplexity",
+            "id": 5
+        },
+        {
+            "type": "PasswordComplexity",
+            "properties": {},
+            "relationships": {},
+            "name": "ImpossibleComplexity",
+            "id": 6
+        },
+        {
+            "type": "PasswordComplexity",
+            "properties": {},
+            "relationships": {},
+            "name": "UnknownComplexity",
+            "id": 7
+        },
+        {
+            "type": "ServiceAuthenticationUser",
+            "properties": {
+                "username": "bob"
+            },
+            "relationships": {
+                "passwordComplexity": "name:TrivialComplexity",
+                "accessLevel": "name:UserLevelAccess"
+            },
+            "name": "ExternalSSHAuthenticationU1",
+            "id": 8
+        },
+        {
+            "type": "ServiceAuthenticationUser",
+            "properties": {
+                "username": "root"
+            },
+            "relationships": {
+                "passwordComplexity": "name:TrivialComplexity",
+                "accessLevel": "name:AdministratorLevelAccess"
+            },
+            "name": "ExternalSSHAuthenticationU2",
+            "id": 9
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasUserAccounts": [
+                    "name:ExternalSSHAuthenticationU1",
+                    "name:ExternalSSHAuthenticationU2"
+                ],
+                "authenticatesService": [
+                    "name:SW_Service_SSH_PFSenseExternalFW",
+                    "name:SW_Service_HTTP_PFSenseExternalFW"
+                ]
+            },
+            "type": "ServiceAuthentication",
+            "comment": "authentication for External FW SSH and web",
+            "name": "ExternalSSHAuthentication",
+            "id": 10
+        },
+        {
+            "type": "ServiceAuthenticationUser",
+            "properties": {
+                "username": "root"
+            },
+            "relationships": {
+                "passwordComplexity": "name:TrivialComplexity",
+                "accessLevel": "name:AdministratorLevelAccess"
+            },
+            "name": "SW_Mail_SSHAuthenticationU1",
+            "id": 11
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasUserAccounts": [
+                    "name:SW_Mail_SSHAuthenticationU1"
+                ],
+                "authenticatesService": [
+                    "name:SW_Mail_SSH"
+                ]
+            },
+            "type": "ServiceAuthentication",
+            "comment": "authentication for External FW SSH and web",
+            "name": "SW_Mail_SSHAuthentication",
+            "id": 12
+        },
+        {
+            "type": "ServiceAuthenticationUser",
+            "properties": {
+                "username": "Administrator"
+            },
+            "relationships": {
+                "passwordComplexity": "name:MediumComplexity",
+                "accessLevel": "name:AdministratorLevelAccess"
+            },
+            "name": "SW_Workstation_1_AuthenticationU1",
+            "id": 13
+        },
+        {
+            "properties": {},
+            "relationships": {
+                "hasUserAccounts": [
+                    "name:SW_Workstation_1_AuthenticationU1"
+                ],
+                "authenticatesService": [
+                    "name:WorkstationOS_1_RDP_OS",
+                    "name:WorkstationOS_1_SMB_OS"
+                ]
+            },
+            "type": "ServiceAuthentication",
+            "comment": "authentication for workstation 1 RDP and SMB",
+            "name": "SW_Workstation_1_Authentication",
+            "id": 14
+        }
+    ]
+}

@@ -1,0 +1,126 @@
+{
+    "nodes": [
+
+      {"________________________________________":"_"},
+
+
+
+
+
+
+
+      {"________________________________________":"_"},
+      {"_comment": "FIREWALL RULES"},
+      {"________________________________________":"_"},
+
+
+      {
+        "name": "EFW_1_rule_1",
+        "type": "ServiceRule",
+        "comment": "Service rule 1 - external port 80 to web service",
+        "properties":{
+          "sourcePort":80,
+          "ruleType":"ALLOW"
+        },
+        "relationships":
+        {
+          "routeSource":["name:ExternalFW Internet NIC"],
+          "routeDestination":["name:Web_Server_Web_SW_Service"]
+        },
+        "id": 2
+      },
+
+
+      {
+        "name": "EFW_1_rule_2",
+        "type": "ServiceRule",
+        "comment": "Service rule - port 22 to ssh on mail server - whoops!",
+        "properties":{
+          "sourcePort":22,
+          "ruleType":"ALLOW"
+        },
+        "relationships":
+        {
+          "routeSource":["name:ExternalFW Internet NIC"],
+          "routeDestination":["name:SW_Mail_SSH_service"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "EFW_1_rule_3",
+        "type": "ServiceRule",
+        "comment": "Service rule - port 25 to sendmail - unauthenticated",
+        "properties":{
+          "sourcePort":25,
+          "ruleType":"ALLOW"
+        },
+        "relationships":
+        {
+          "routeSource":["name:ExternalFW Internet NIC"],
+          "routeDestination":["name:SW_Mail_mail_service"]
+        },
+        "id": 2
+      },
+
+      {
+        "name": "EFW_1_rule_4",
+        "type": "ServiceRule",
+        "comment": "Service rule - things behind DMZ are allowed to access anything in the dmz",
+        "properties":{
+          "ruleType":"ALLOW"
+        },
+        "relationships":
+        {
+          "routeSource":["name:DMZ_Internal_FW Internal 1 NIC"],
+          "routeDestination":["*"]
+        },
+        "id": 2
+      },
+
+
+
+
+
+
+     {
+        "name": "EFW_1_NIC_rule_1",
+        "type": "NICRule",
+        "comment": "Service rule all outgoing is ok",
+        "properties":{
+          "ruleType":"ALLOW"
+        },
+        "relationships":
+        {
+          "routeSource":["name:ExternalFW Internal Server NIC"],
+          "routeDestination":["name:ExternalFW Internet NIC"]
+        },
+        "id": 2
+      },
+
+     {
+        "name": "EFW_1_NIC_rule_2",
+        "type": "NICRule",
+        "comment": "Service rule all outgoing is ok",
+        "properties":{
+          "ruleType":"ALLOW"
+        },
+        "relationships":
+        {
+          "routeSource":["name:ExternalFW Internal Server NIC"],
+          "routeDestination":["name:DMZ_Internal_FW Internal 1 NIC"]
+        },
+        "id": 2
+      },
+
+
+
+
+
+
+
+
+      {"________________________________________":"_"}
+
+    ]
+}

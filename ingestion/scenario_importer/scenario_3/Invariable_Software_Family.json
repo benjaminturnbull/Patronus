@@ -1,0 +1,2084 @@
+{
+    "nodes": [
+        {
+            "name": "Zikula Application Framework",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:zikula:zikula_application_framework"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Zikula Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Thermald",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:debian_linux:thermald"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Debian Linux Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Android",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:google:android"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Google Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Review Board",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:reviewboard:review_board"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Reviewboard Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Storage Api",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:drupal:storage_api"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Drupal Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Qradar Security Information And Event Manager",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:ibm:qradar_security_information_and_event_manager"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:IBM Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Endpoint Manager For Remote Control",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:ibm:endpoint_manager_for_remote_control"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:IBM Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Bigfix Remote Control",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:ibm:bigfix_remote_control"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:IBM Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Tealeaf Customer Experience",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:ibm:tealeaf_customer_experience"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:IBM Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Rational Clearcase",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:ibm:rational_clearcase"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:IBM Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Rational License Key Server",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:ibm:rational_license_key_server"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:IBM Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Mysql",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:pivotal_software:mysql"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Pivotal Software Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Mdm9206 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:mdm9206_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Mdm9607 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:mdm9607_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Mdm9625 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:mdm9625_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Mdm9635M Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:mdm9635m_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Mdm9640 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:mdm9640_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Mdm9645 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:mdm9645_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Mdm9650 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:mdm9650_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Mdm9655 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:mdm9655_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Msm8909W Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:msm8909w_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 205 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_205_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 210 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_210_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 212 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_212_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 400 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_400_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 410 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_410_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 412 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_412_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 415 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_415_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 425 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_425_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 430 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_430_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 450 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_450_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 615 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_615_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 616 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_616_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 617 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_617_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 625 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_625_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 650 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_650_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 652 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_652_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 800 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_800_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 808 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_808_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 810 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_810_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 820 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_820_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 820A Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_820a_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 835 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_835_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 845 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_845_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 850 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_850_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sdx20 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sdx20_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Mdm9615 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:mdm9615_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 427 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_427_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sd 435 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sd_435_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sdm630 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sdm630_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sdm636 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sdm636_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sdm660 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:sdm660_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Fsm9055 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:fsm9055_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Cf-Release",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:cloudfoundry:cf-release"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Cloudfoundry Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Cloud Foundry Elastic Runtime",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:pivotal_software:cloud_foundry_elastic_runtime"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Pivotal Software Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Nextcloud Server",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:nextcloud:nextcloud_server"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Nextcloud Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Hw0021 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:wanscam:hw0021_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Wanscam Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "IOS",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:cisco:ios"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Cisco Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Ios Xe",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:cisco:ios_xe"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Cisco Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Virtual System Administrator",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:kaseya:virtual_system_administrator"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Kaseya Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Remote Support",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:bomgar:remote_support"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Bomgar Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Mac Os X",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:apple:mac_os_x"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Apple Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Apple Tv",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:apple:apple_tv"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Apple Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Iphone Os",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:apple:iphone_os"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Apple Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Watchos",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:apple:watchos"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Apple Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Icloud",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:apple:icloud"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Apple Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Itunes",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:apple:itunes"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Apple Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Safari",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:apple:safari"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Apple Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Ubuntu Linux",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:canonical:ubuntu_linux"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Canonical Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Apq8096Au Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:apq8096au_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Msm8996Au Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:qualcomm:msm8996au_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Qualcomm Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Http Server",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:apache:http_server"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Apache Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Debian Linux",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:debian:debian_linux"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Debian Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Tpshop",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:tp-shop:tpshop"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Tp-Shop Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Business Process Manager",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:ibm:business_process_manager"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:IBM Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Business Process Manager Enterprise Service Bus",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:ibm:business_process_manager_enterprise_service_bus"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:IBM Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Websphere",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:ibm:websphere"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:IBM Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Oxygenos",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:oneplus:oxygenos"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oneplus Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Jetson Tk1 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:nvidia:jetson_tk1_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Nvidia Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Jetson Tx1 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:nvidia:jetson_tx1_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Nvidia Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Tegra K1 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:nvidia:tegra_k1_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Nvidia Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Chromium",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:chromium:chromium"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Chromium Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Enterprise Linux Desktop",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:redhat:enterprise_linux_desktop"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Redhat Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Enterprise Linux Server",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:redhat:enterprise_linux_server"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Redhat Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Enterprise Linux Workstation",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:redhat:enterprise_linux_workstation"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Redhat Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Ios Xr",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:cisco:ios_xr"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Cisco Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Unified Communications Manager",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:cisco:unified_communications_manager"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Cisco Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Clamav",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:clamav:clamav"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Clamav Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Openssl",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:openssl:openssl"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Openssl Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "ZSH",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:zsh:zsh"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:ZSH Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Enterprise Linux",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:redhat:enterprise_linux"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Redhat Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Linux Kernel",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:linux:linux_kernel"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Linux Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Nessus",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:tenable:nessus"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Tenable Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Struts",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:apache:struts"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Apache Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Solaris",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:oracle:solaris"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Agile Product Lifecycle Management For Process",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:agile_product_lifecycle_management_for_process"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Access Manager",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:access_manager"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Weblogic Server",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:weblogic_server"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Retail Returns Management",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:retail_returns_management"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Retail Central Office",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:retail_central_office"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Enterprise Manager Ops Center",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:enterprise_manager_ops_center"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Banking Corporate Lending",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:banking_corporate_lending"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Banking Payments",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:banking_payments"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Flexcube Enterprise Limits And Collateral Management",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:flexcube_enterprise_limits_and_collateral_management"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Flexcube Investor Servicing",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:flexcube_investor_servicing"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Flexcube Universal Banking",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:flexcube_universal_banking"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Enterprise Manager Base Platform",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:enterprise_manager_base_platform"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Peoplesoft Enterprise Human Capital Management",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:peoplesoft_enterprise_human_capital_management"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Communications Order And Service Management",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:communications_order_and_service_management"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Security Service",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:security_service"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Outside In Technology",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:outside_in_technology"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Adaptive Access Manager",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:adaptive_access_manager"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Peoplesoft Enterprise Peopletools",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:peoplesoft_enterprise_peopletools"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "JDK",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:jdk"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "JRE",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:jre"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Jrockit",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:jrockit"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Siebel Core-Server Framework",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:siebel_core-server_framework"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Webcenter Sites",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:webcenter_sites"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Peoplesoft Enterprise Pt Peopletools",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:peoplesoft_enterprise_pt_peopletools"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Hospitality Simphony",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:hospitality_simphony"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Solaris Cluster",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:solaris_cluster"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Vm Virtualbox",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:vm_virtualbox"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Peoplesoft Enterprise Prtl Interaction Hub",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:peoplesoft_enterprise_prtl_interaction_hub"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Hospitality Cruise Fleet Management",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:hospitality_cruise_fleet_management"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Hospitality Guest Access",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:hospitality_guest_access"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "E-Business Suite",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:e-business_suite"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Peoplesoft Enterprise Human Capital Management Shared Components",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:oracle:peoplesoft_enterprise_human_capital_management_shared_components"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Oracle Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sanitize",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:sanitize_project:sanitize"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Sanitize Project Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Html Sanitizer",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:rubyonrails:html_sanitizer"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Rubyonrails Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Logstash",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:elasticsearch:logstash"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Elasticsearch Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "X-Pack",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:elastic:x-pack"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Elastic Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Crucible",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:atlassian:crucible"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Atlassian Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Fisheye",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:atlassian:fisheye"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Atlassian Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Bamboo",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:atlassian:bamboo"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Atlassian Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Manageengine Desktop Central",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:zohocorp:manageengine_desktop_central"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Zohocorp Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Alice 6 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:philips:alice_6_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Philips Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Dir-601 Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:dlink:dir-601_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Dlink Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Opera Browser",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:opera:opera_browser"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Opera Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Myswisscomassistant",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:swisscom:myswisscomassistant"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Swisscom Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Tvmediahelper",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:swisscom:tvmediahelper"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Swisscom Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Routeros",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:mikrotik:routeros"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Mikrotik Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Drupal",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:drupal:drupal"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Drupal Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Network Time System",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:softros:network_time_system"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Softros Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Mailer",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:jenkins:mailer"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Jenkins Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Globalforms",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:square-9:globalforms"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Square-9 Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Prestashop",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:prestashop:prestashop"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Prestashop Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Responsive Mega Menu Pro",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:responsive_mega_menu_pro_project:responsive_mega_menu_pro"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Responsive Mega Menu Pro Project Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Screen-Resolution-Extra",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:canonical:screen-resolution-extra"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Canonical Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Libressl",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:openbsd:libressl"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Openbsd Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Netpbm",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:netpbm_project:netpbm"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Netpbm Project Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Sentry Vision",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:tnlsoftsolutions:sentry_vision"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Tnlsoftsolutions Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Octopus Deploy",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:octopus:octopus_deploy"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Octopus Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Terraform",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:hashicorp:terraform"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Hashicorp Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Long Range Zip",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:long_range_zip_project:long_range_zip"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Long Range Zip Project Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Nordvpn",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:nordvpn:nordvpn"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Nordvpn Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Dedecms",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:dedecms:dedecms"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Dedecms Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Binutils",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:gnu:binutils"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:GNU Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Gespage",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:gespage:gespage"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Gespage Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "My Cloud Firmware",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/o:wdc:my_cloud_firmware"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:WDC Company"
+            },
+            "type": "Software Family"
+        },
+        {
+            "name": "Spark",
+            "comment": "",
+            "properties": {
+                "alias": [
+                    "cpe:/a:sparkjava:spark"
+                ]
+            },
+            "relationships": {
+                "manufacturedBy": "name:Sparkjava Company"
+            },
+            "type": "Software Family"
+        }
+    ]
+}

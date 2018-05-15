@@ -1,0 +1,318 @@
+{
+    "nodes": [
+    {"_comment": "---------THE INTERNET------------"},
+
+      {
+        "name": "The Internet",
+        "type": "Network",
+        "properties":{},
+        "id": 1
+      },
+
+
+
+
+    {"_comment": "---------External Network------------"},
+
+      {
+        "hostname": "ExternalFW",
+        "type": "Firewall",
+        "properties":{},
+        "id": 2
+      },
+      {
+        "name": "ExternalFW Internet NIC",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"192.168.22.254"
+        },
+        "id": 3
+      },
+      {
+        "name": "ExternalFW DMZ NIC",
+        "type": "NIC",
+        "properties":{"ipAddress":"192.168.23.254"},
+        "id": 4
+      },
+      {
+        "name": "ExternalFW Internal Server NIC",
+        "type": "NIC",
+        "properties":{},
+        "id": 5
+      },
+      {
+        "name": "ExternalFW Workstation NIC",
+        "type": "NIC",
+        "properties":{},
+        "id": 6
+      },
+
+
+
+
+
+    {"_comment": "--------------------------------"},
+    {"_comment": "---------DMZ Network------------"},
+    {"_comment": "--------------------------------"},
+
+      {
+        "name": "DMZ Network",
+        "type": "Network",
+        "properties":{},
+        "id": 7
+      },
+
+
+
+
+    {"_comment": "-------mail server--------"},
+      {
+        "name": "Mail Server NIC",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"TODO"
+        },
+         "relationships":{
+          "isConnectedTo":"name:DMZ Network"
+      },
+        "id": 13
+      },
+      {
+        "name": "Mail Server",
+        "type": "Server",
+        "properties":{
+          "hostname":"TODO"
+        },
+        "relationships":{
+          "runningOS":"name:Windows 2008",
+          "runningSoftware":[],
+          "hasNIC":"name:Mail Server NIC"
+        },
+        "id": 10
+      },
+
+
+
+      {"_comment": "-------vpn server--------"},
+      {
+        "name": "VPN Server NIC",
+        "type": "NIC",
+        "properties":{
+          "ipAddress":"TODO"
+        },
+         "relationships":{
+          "isConnectedTo":"name:DMZ Network"
+      },
+        "id": 14
+      },
+      {
+        "name": "VPN Server",
+        "type": "Server",
+        "properties":{
+          "hostname":"TODO"
+        },
+        "relationships":{
+          "runningOS":"name:Windows 2008",
+          "runningSoftware":[],
+          "hasNIC":"name:VPN Server NIC"
+      },
+        "id": 11
+      },
+
+
+      {"_comment": "-------web server--------"},
+      {
+        "name": "Web Server NIC",
+        "type": "NIC",
+        "properties":{},
+        "relationships":{
+          "isConnectedTo":"name:DMZ Network"
+      },
+        "id": 15
+      },
+      {
+        "name": "Web Server",
+        "type": "Server",
+        "properties":{
+          "hostname":"TODO"
+        },
+        "relationships":{
+          "runningOS":"name:Windows 2008",
+          "runningSoftware":[],
+          "hasNIC":"name:Web Server NIC"
+      },
+        "id": 12
+      },
+
+
+
+
+
+    {"_comment": "---------Internal Network------------"},
+
+
+      {
+        "name": "Internal Workstation Network",
+        "type": "Network",
+        "properties":{},
+        "id": 8
+      },
+      {
+        "name": "Internal Server Network",
+        "type": "Network",
+        "properties":{},
+        "id": 9
+      },
+      {
+        "name": "Internal AD Server",
+        "type": "Server",
+        "properties":{},
+        "id": 16
+      },
+      {
+        "name": "Internal DB Server",
+        "type": "Server",
+        "properties":{},
+        "id": 17
+      },
+      {
+        "name": "Internal File Share Server",
+        "type": "Server",
+        "properties":{},
+        "id": 18
+      },
+      {
+        "name": "Internal Wiki Server",
+        "type": "Server",
+        "properties":{},
+        "id": 19
+      },
+      {
+        "name": "Internal AD NIC",
+        "type": "NIC",
+        "properties":{},
+        "id": 20
+      },
+      {
+        "name": "Internal DB NIC",
+        "type": "NIC",
+        "properties":{},
+        "id": 21
+      },
+      {
+        "name": "Internal file share NIC",
+        "type": "NIC",
+        "properties":{},
+        "id": 22
+      },
+      {
+        "name": "Internal wiki NIC",
+        "type": "NIC",
+        "properties":{},
+        "id": 23
+      }
+    ],
+
+
+
+  "relationships":[
+    {
+      "source":2,
+      "target":[3,4,5,6],
+      "type": "hasNIC",
+      "properties":{},
+      "comment":"external firewall has 4 nics"
+    },
+    {
+      "source":4,
+      "target":7,
+      "type": "isConnectedTo",
+      "properties":{},
+      "comment":"dmz nic is connected to dmz"
+    },
+    {
+      "source":3,
+      "target":1,
+      "type": "isConnectedTo",
+      "properties":{},
+      "comment":"internet nic is connected to internet"
+    },
+    {
+      "source":5,
+      "target":9,
+      "type": "isConnectedTo",
+      "properties":{},
+      "comment":"internal server nic is connected to internal server net"
+    },
+    {
+      "source":6,
+      "target":8,
+      "type": "isConnectedTo",
+      "properties":{},
+      "comment":"internal workstation nic is connected to internal workstation net"
+    },
+    {
+      "source":[13,14,15],
+      "target":[7],
+      "type": "isConnectedTo",
+      "properties":{},
+      "comment":"dmz server nics are connected to the dmz"
+    },
+    {
+      "source":10,
+      "target":13,
+      "type": "hasNIC",
+      "properties":{},
+      "comment":"mail server has mail server nic"
+    },
+    {
+      "source":11,
+      "target":14,
+      "type": "hasNIC",
+      "properties":{},
+      "comment":"vpn server has vpn server nic"
+    },
+    {
+      "source":12,
+      "target":15,
+      "type": "hasNIC",
+      "properties":{},
+      "comment":"web server has web server nic"
+    },
+    {
+      "source":[21,20,22,19],
+      "target":[9],
+      "type": "isConnectedTo",
+      "properties":{},
+      "comment":"internal server nics are connected to the internal server network"
+    },
+    {
+      "source":19,
+      "target":23,
+      "type": "hasNIC",
+      "properties":{},
+      "comment":"internal wiki server has wiki server nic"
+    },
+    {
+      "source":18,
+      "target":22,
+      "type": "hasNIC",
+      "properties":{},
+      "comment":"internal file server has file server nic"
+    },
+    {
+      "source":16,
+      "target":20,
+      "type": "hasNIC",
+      "properties":{},
+      "comment":"internal AD server has AD server nic"
+    },
+    {
+      "source":17,
+      "target":21,
+      "type": "hasNIC",
+      "properties":{},
+      "comment":"internal db server has db server nic"
+    }
+  ]
+}
