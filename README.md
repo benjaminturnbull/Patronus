@@ -6,7 +6,8 @@ Acting in both the live environment and modelling data from that environment.
 The idea is to now open source the result, and allow contributions from others.
 This project uses Python, JSON, Neo4j Graphing Database and a number of security tools to gather data.
 
-[Patronus](img/Logo_Patronus.png)
+[logo]: https://github.com/benjaminturnbull/Patronus/blob/master/img/Logo_Patronus.png "Patronus Logo"
+
 
 ### About You
 ---
